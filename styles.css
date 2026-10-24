@@ -3,3 +3,24 @@
 @media(max-width:1250px){.utility-services a{padding:0 7px}.utility-right a{padding:0 6px}nav{gap:13px}.nav{gap:16px}.brand{font-size:23px}.hero-inner{grid-template-columns:35% 42% 23%}.hero h1{font-size:40px}.services-layout,.industries-layout{grid-template-columns:240px 1fr;gap:12px}.service-grid{grid-template-columns:repeat(4,1fr)}.service-grid a{min-height:105px}.industry-grid{grid-template-columns:repeat(4,1fr)}.industry{height:112px}.benefits-grid{grid-template-columns:repeat(3,1fr);gap:12px}.benefits-grid>div{border:0}.closing-layout{gap:18px}}
 @media(max-width:900px){.shell{width:calc(100% - 36px)}.utility-services a:nth-child(n+4){display:none}.utility-right a:first-child{display:none}.nav{flex-wrap:wrap}.mobile-toggle{display:block;margin-left:auto;cursor:pointer}.mobile-toggle svg{width:24px}.nav-actions .search-button{display:none}nav{display:none;position:absolute;left:0;right:0;top:64px;background:white;padding:18px;box-shadow:0 12px 20px #0002;flex-direction:column;align-items:stretch;gap:16px}nav.open{display:flex}.nav-group{padding:0}.dropdown{position:static;box-shadow:none;padding:5px 12px}.nav-group:hover .dropdown,.nav-group:focus-within .dropdown{display:block}.hero-inner{grid-template-columns:1fr 1fr;gap:15px;min-height:430px}.hero-gallery{display:none}.hero-visual{margin-left:0;max-width:440px}.hero h1{font-size:44px}.subscriptions{padding:36px 0}.subscription-grid{grid-template-columns:1fr}.subscription-card{min-height:0}.services-layout,.industries-layout{grid-template-columns:1fr;gap:20px}.section-side{max-width:550px}.closing-layout{grid-template-columns:1fr 1fr;padding:25px 0}.closing-points{grid-column:1/-1;grid-template-columns:repeat(3,1fr);border:0;padding:0}}
 @media(max-width:600px){.utility{height:32px}.utility-services a:nth-child(n+2){display:none}.utility-right a:nth-child(2){display:none}.brand{font-size:20px}.brand-rule{height:23px}.nav-actions .outline{display:none}.nav-actions .button.small{padding:8px 12px}.hero-inner{display:block;padding:34px 0 0}.hero h1{font-size:43px}.hero-copy p{font-size:13px}.hero-visual{height:270px;margin-top:12px;max-width:440px}.screen{height:233px}.phone{height:180px}.benefits-grid{grid-template-columns:1fr 1fr;gap:10px}.benefits-grid>div{padding:5px 0}.benefits svg{width:25px}.benefits b{font-size:10px}.benefits small{font-size:9px;white-space:normal}.section-heading h2{font-size:25px}.subscription-card{grid-template-columns:47px 1fr;padding:16px 12px}.card-icon{width:44px;height:44px}.service-grid,.industry-grid{grid-template-columns:repeat(2,1fr)}.service-grid a{min-height:118px}.industry{height:125px}.closing-layout{grid-template-columns:1fr}.closing-points{grid-column:auto;grid-template-columns:1fr}.closing h2{font-size:29px}.foot{flex-direction:column;gap:10px}.hero-actions .button{padding:9px 11px;min-width:0}.hero-actions{gap:6px}}
+/* Homepage mockup alignment: 1450px content grid, editorial left hero, dashboard center, industry collage right. */
+@media (min-width:1251px){
+ .utility{height:26px}
+ .header{height:51px}
+ .nav{gap:24px}
+ .brand{font-size:26px}
+ nav{gap:25px}
+ .hero,.hero-inner{min-height:283px}
+ .hero-inner{grid-template-columns:34% 40% 26%}
+ .hero-copy{padding:17px 0 23px}
+ .hero h1{font-size:48px;line-height:.98;max-width:480px;margin:8px 0 9px}
+ .hero-copy p{max-width:435px;font-size:13px;line-height:1.46;margin-bottom:18px}
+ .hero-actions .button{min-width:148px;min-height:37px}
+ .hero-visual{height:275px;padding-bottom:9px;margin-left:0}
+ .laptop{max-width:480px}
+ .screen{height:248px}
+ .phone{height:194px;bottom:4px}
+ .hero-gallery{transform:skewX(-11deg) translateX(35px)}
+}
+@media(min-width:1500px){.hero-inner{grid-template-columns:34% 40% 26%}}
+@media(max-width:600px){.hero h1{letter-spacing:-1.3px}.hero-actions{flex-wrap:wrap}}
