@@ -24,3 +24,28 @@
 }
 @media(min-width:1500px){.hero-inner{grid-template-columns:34% 40% 26%}}
 @media(max-width:600px){.hero h1{letter-spacing:-1.3px}.hero-actions{flex-wrap:wrap}}
+
+/* Approved image: two compact nav bars and a single uninterrupted image-led hero.
+   Keep actual text and controls in HTML, and align the visual layers at desktop widths. */
+@media(min-width:1251px){
+ .hero{min-height:283px;background-position:center 46%}
+ .hero-shade{background:linear-gradient(90deg,rgba(2,21,43,.94) 0%,rgba(4,38,70,.81) 34%,rgba(6,44,75,.22) 65%,rgba(0,0,0,.04) 100%)}
+ .hero-inner{align-items:stretch}
+ .hero-copy{align-self:center}
+ .hero-visual{align-self:end}
+ .hero-gallery{align-self:stretch;height:auto;min-height:283px}
+ .hero-gallery{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:1fr 1fr;gap:5px;background:#fff}
+ .hero-photo{background-position:center;filter:saturate(1.06) contrast(1.03)}
+ .hero-photo-one{background-position:55% 38%}
+ .hero-photo-two{background-position:50% 30%}
+ .hero-photo-three{background-position:50% 24%}
+ .hero-photo-four{background-position:56% center}
+ .hero-photo-five{background-position:50% center}
+ .hero-photo-six{background-position:50% 25%}
+ .nav-group .dropdown{z-index:80}
+ .utility-services a:hover,.utility-right a:hover{color:#ff8a42}
+}
+@media(max-width:900px){
+ .header{height:64px}
+ .nav-group .dropdown{max-height:42vh;overflow-y:auto}
+}
