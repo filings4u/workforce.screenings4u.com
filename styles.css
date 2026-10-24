@@ -49,3 +49,29 @@
  .header{height:64px}
  .nav-group .dropdown{max-height:42vh;overflow-y:auto}
 }
+
+/* Approved 02+04 hero: precise desktop alignment, independent left/center/right panels */
+@media (min-width:1251px) {
+  .hero{height:283px;min-height:283px;isolation:isolate}
+  .hero-inner{height:283px;min-height:283px;grid-template-columns:minmax(0,34%) minmax(0,40%) minmax(0,26%);overflow:visible}
+  .hero-copy{position:relative;z-index:4;min-width:0;padding:0 12px 0 0}
+  .hero h1{font-size:48px;font-weight:900;letter-spacing:-2.4px;line-height:.99;white-space:normal}
+  .hero h1 span{display:block;white-space:nowrap}
+  .hero-copy p{max-width:410px;margin-top:9px;margin-bottom:17px}
+  .hero-actions{gap:14px}
+  .hero-actions .button{min-height:37px;padding:10px 22px;font-weight:800;border-radius:4px}
+  .hero-visual{position:relative;height:283px;width:100%;padding:12px 0 8px 0;margin:0;overflow:visible;z-index:3}
+  .laptop{max-width:none;width:95%;margin:0 0 0 4px}
+  .screen{height:245px;border-width:8px;border-radius:12px 12px 3px 3px}
+  .laptop-base{height:10px}
+  .phone{height:188px;width:87px;right:-15px;bottom:6px;z-index:3}
+  .hero-gallery{position:relative;width:calc(100% + max(32px,(100vw - 1450px)/2));height:283px;min-height:0;margin-right:0;transform:skewX(-11deg) translateX(22px);border-left:5px solid #fff;overflow:hidden;z-index:1}
+  .hero-photo{background-repeat:no-repeat}
+}
+@media(min-width:1251px) and (max-width:1450px){
+  .hero-gallery{width:calc(100% + 32px)}
+}
+@media(max-width:1250px) and (min-width:901px){
+ .hero h1 span{display:block}
+ .hero-gallery{transform:skewX(-11deg) translateX(10px)}
+}
