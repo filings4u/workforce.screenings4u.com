@@ -31,7 +31,7 @@ function completed(data={}){
   message.textContent='Your Workforce account has already been provisioned.';
   note.textContent='Use the secure sign-in page to access your portal.';
   continueLink.textContent='Go to sign in';
-  continueLink.href='login.html';
+  continueLink.href='https://portal.screenings4u.com/';
   actions.hidden=false;
 }
 function fail(text){
