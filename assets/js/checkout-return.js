@@ -17,6 +17,9 @@ async function status(){
   return data;
 }
 function ready(url){
+  const parsed=new URL(url,location.href);
+  if(parsed.hostname==='dot.screenings4u.com' && parsed.pathname.endsWith('/account-creation.html')){parsed.hostname=location.hostname;parsed.pathname='/account-creation.html';url=parsed.toString()}
+
   card.classList.add('is-ready');
   title.textContent='Payment confirmed.';
   message.textContent='Your secure account setup is ready. Continue to enter your organization and administrator information.';
