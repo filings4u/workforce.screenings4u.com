@@ -87,7 +87,7 @@ async function start(){
     if(!selected)throw Error('The selected plan is not currently available.');
     renderPlan(selected);
     status.textContent='Loading secure payment form…';
-    const session=await api('/workforce-checkout',{method:'POST',body:JSON.stringify({surface:'dot_marketing',embedded:true,plan_code:code})});
+    const session=await api('/workforce-checkout',{method:'POST',body:JSON.stringify({surface:'dot_marketing',return_site:'workforce',embedded:true,plan_code:code})});
     if(!session.stripe_publishable_key||!session.client_secret)throw Error('Stripe checkout configuration is unavailable.');
     const stripe=window.Stripe(session.stripe_publishable_key);
     if(typeof stripe.initCheckoutElementsSdk!=='function')throw Error('The loaded Stripe.js version does not support Checkout Elements.');
