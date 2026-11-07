@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /checkout.html
-Sitemap: https://workforce.screenings4u.com/sitemap.xml
