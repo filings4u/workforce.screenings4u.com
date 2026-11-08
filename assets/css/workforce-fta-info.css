@@ -1,0 +1,68 @@
+/* FTA public transit educational page — responsive Workforce design */
+.fta-info{--ft-navy:#01122F;--ft-gold:#FDC102}
+.fta-info .ft-hero{background:linear-gradient(115deg,#f8fafc,#fff 64%,#fff8e8);padding:55px 0}
+.fta-info .ft-hero-grid,.fta-info .ft-operations-grid,.fta-info .ft-rule-grid,.fta-info .ft-guidance-grid,.fta-info .ft-rates-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:54px;align-items:center}
+.fta-info .ft-hero h1{font-size:clamp(38px,3.9vw,60px);line-height:1.1;letter-spacing:-.05em;font-weight:900;margin:0 0 20px}
+.fta-info .ft-hero p{font-size:16px;line-height:1.7;color:#54647a;margin:0}
+.fta-info .ft-actions{display:flex;flex-wrap:wrap;gap:11px;margin:26px 0 17px}
+.fta-info .ft-hero small{font-size:12px;color:#66758a;font-weight:700}
+.fta-info .ft-hero-visual{position:relative;isolation:isolate;min-width:0;padding:23px 14px 34px 10px}
+.fta-info .ft-gold-shape{position:absolute;z-index:-1;top:0;left:8%;height:84%;width:42%;border-radius:18px;transform:skew(-14deg);background:linear-gradient(140deg,#FDC102,#ffe4a9)}
+.fta-info .ft-screen,.fta-info .ft-operations-screen{background:white;border:1px solid #dce4ed;border-radius:14px;overflow:hidden;box-shadow:0 18px 40px #01122f1e}
+.fta-info .ft-screen-bar{height:32px;background:#01122F;display:flex;align-items:center;gap:5px;padding:0 13px}
+.fta-info .ft-screen-bar i{width:7px;height:7px;border-radius:50%;background:#D4D3D4}
+.fta-info .ft-screen-bar i:first-child{background:#FDC102}
+.fta-info .ft-screen-bar b{font-size:9px;color:white;letter-spacing:.13em;margin-left:9px}
+.fta-info .ft-screen img{display:block;width:100%;height:310px;object-fit:cover;object-position:top left}
+.fta-info .ft-screen-label{position:absolute;right:0;bottom:0;padding:9px 13px;background:white;border:1px solid #e1e6ee;border-radius:8px;font-size:11px;font-weight:800;box-shadow:0 7px 18px #01122f14}
+.fta-info .ft-rule,.fta-info .ft-guidance{background:#01122F;color:white;padding:39px 0}
+.fta-info .ft-rule .wf-eyebrow,.fta-info .ft-guidance .wf-eyebrow{color:#FDC102}
+.fta-info .ft-rule h2,.fta-info .ft-guidance h2{font-size:clamp(26px,2.7vw,39px);line-height:1.17;letter-spacing:-.04em;color:white;margin:0}
+.fta-info .ft-rule p,.fta-info .ft-guidance p{font-size:14px;line-height:1.74;color:#d2ddec;margin:0}
+.fta-info .ft-rule a{color:#FDC102;text-decoration:underline;text-underline-offset:3px}
+.fta-info .ft-coverage,.fta-info .ft-operations,.fta-info .ft-rates,.fta-info .ft-workflow,.fta-info .ft-software{padding:72px 0}
+.fta-info .ft-operations,.fta-info .ft-workflow,.fta-info .ft-software{background:#f7f9fc}
+.fta-info .ft-heading{text-align:center;max-width:880px;margin:0 auto 32px}
+.fta-info .ft-heading h2{font-size:clamp(29px,3vw,43px);letter-spacing:-.045em;line-height:1.15;margin:0 0 11px}
+.fta-info .ft-heading p{font-size:15px;line-height:1.67;color:#627086;margin:0}
+.fta-info .ft-coverage-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}
+.fta-info .ft-coverage-grid article{background:#fbfcfe;border:1px solid #e0e7ef;border-radius:14px;padding:25px}
+.fta-info .ft-coverage-grid article>span{display:grid;place-items:center;width:38px;height:38px;background:#fff1bf;color:#856600;border-radius:10px;font-weight:900;font-size:12px;margin-bottom:22px}
+.fta-info .ft-coverage-grid h3{font-size:18px;line-height:1.27;margin:0 0 10px}
+.fta-info .ft-coverage-grid p{font-size:13px;line-height:1.65;color:#5b6980;margin:0}
+.fta-info .ft-reference{font-size:12px;color:#607187;text-align:center;line-height:1.65;margin:23px auto 0}
+.fta-info .ft-reference a{border-bottom:1px solid #FDC102}
+.fta-info .ft-operations-copy h2{font-size:clamp(30px,3vw,44px);line-height:1.15;letter-spacing:-.045em;margin:0 0 16px}
+.fta-info .ft-operations-copy p{font-size:15px;line-height:1.7;color:#5b6980;margin:0 0 20px}
+.fta-info .ft-operations-copy ul{padding:0;margin:0 0 26px;display:grid;gap:12px;list-style:none}
+.fta-info .ft-operations-copy li{display:flex;align-items:flex-start;gap:11px;font-size:14px;font-weight:650}
+.fta-info .ft-operations-copy li:before{content:"✓";width:20px;height:20px;display:grid;place-items:center;background:#FDC102;border-radius:50%;flex:none;font-weight:900;font-size:12px}
+.fta-info .ft-screen-heading{font-size:10px;letter-spacing:.13em;font-weight:850;padding:13px 16px;background:#01122F;color:white}
+.fta-info .ft-operations-screen img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top left;display:block}
+.fta-info .ft-rates{background:#fff}
+.fta-info .ft-rates h2{font-size:clamp(29px,3vw,43px);line-height:1.15;letter-spacing:-.045em;margin:0 0 15px}
+.fta-info .ft-rates p{font-size:14px;line-height:1.7;color:#5d6b80;margin:0 0 17px}
+.fta-info .ft-rates a{font-size:12px;font-weight:850;border-bottom:2px solid #FDC102;padding-bottom:4px}
+.fta-info .ft-rate-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fta-info .ft-rate-pair>div{padding:30px 16px;background:#f8fafc;border:1px solid #e0e7ef;border-radius:14px;text-align:center}
+.fta-info .ft-rate-pair strong{display:block;font-size:clamp(44px,5vw,66px);color:#01122F;line-height:1;letter-spacing:-.07em;margin-bottom:18px}
+.fta-info .ft-rate-pair span{font-size:13px;line-height:1.55;font-weight:750;color:#56657b}
+.fta-info .ft-workflow-grid,.fta-info .ft-software-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:19px}
+.fta-info .ft-workflow-grid article{display:flex;align-items:start;flex-direction:column;padding:28px;border:1px solid #e0e6ee;border-radius:14px;background:white}
+.fta-info .ft-workflow-grid article>span{color:#8e6b00;letter-spacing:.13em;font-weight:900;font-size:10px;margin-bottom:20px}
+.fta-info .ft-workflow-grid h3{font-size:20px;letter-spacing:-.025em;margin:0 0 12px}
+.fta-info .ft-workflow-grid p{font-size:13px;color:#5d6b81;line-height:1.66;margin:0 0 20px;flex:1}
+.fta-info .ft-workflow-grid a{font-size:12px;font-weight:850;border-bottom:2px solid #FDC102;padding-bottom:4px}
+.fta-info .ft-product{display:flex;flex-direction:column;align-items:start;padding:28px;background:#fff;border:1px solid #dfe6ee;border-radius:15px;min-height:330px;transition:transform .2s,border-color .2s}
+.fta-info .ft-product:hover{transform:translateY(-4px);border-color:#FDC102}
+.fta-info .ft-product>span:first-child{font-size:10px;font-weight:900;letter-spacing:.13em;color:#906d00;margin-bottom:19px}
+.fta-info .ft-product h3{font-size:23px;line-height:1.2;letter-spacing:-.035em;margin:0 0 13px}
+.fta-info .ft-product p{font-size:13px;line-height:1.68;color:#5c6980;margin:0 0 20px;flex:1}
+.fta-info .ft-product strong{font-size:13px;margin-bottom:19px}
+.fta-info .ft-product-link{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#01122F;color:#fff;width:100%;padding:13px 14px;border-radius:8px;border-bottom:3px solid #FDC102;font-size:12px;font-weight:850}
+.fta-info .ft-product-link b{font-size:18px;color:#FDC102}
+.fta-info a:focus-visible{outline:3px solid #FDC102;outline-offset:3px}
+@media(max-width:1100px){.fta-info .ft-hero-grid,.fta-info .ft-operations-grid,.fta-info .ft-rates-grid{gap:27px}.fta-info .ft-coverage-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.fta-info .ft-screen img{height:270px}}
+@media(max-width:850px){.fta-info .ft-hero{padding:18px 0 43px}.fta-info .ft-hero-grid{display:flex;flex-direction:column;align-items:stretch;gap:16px}.fta-info .ft-hero-visual{order:-1;width:100%;max-width:610px;margin:auto}.fta-info .ft-screen img{height:clamp(200px,45vw,295px)}.fta-info .ft-hero h1{font-size:clamp(34px,6vw,48px)}.fta-info .ft-rule-grid,.fta-info .ft-operations-grid,.fta-info .ft-guidance-grid,.fta-info .ft-rates-grid{grid-template-columns:1fr;gap:24px}.fta-info .ft-workflow-grid,.fta-info .ft-software-grid{grid-template-columns:1fr;max-width:610px;margin:auto}.fta-info .ft-product{min-height:0}}
+@media(max-width:550px){.fta-info .ft-coverage,.fta-info .ft-operations,.fta-info .ft-rates,.fta-info .ft-workflow,.fta-info .ft-software{padding:46px 0}.fta-info .ft-coverage-grid{grid-template-columns:1fr}.fta-info .ft-actions .btn{width:100%}.fta-info .ft-hero-visual{padding:14px 10px 24px 5px}.fta-info .ft-screen img{height:190px}.fta-info .ft-rule,.fta-info .ft-guidance{padding:30px 0}}
+@media(prefers-reduced-motion:reduce){.fta-info .ft-product{transition:none!important}}
