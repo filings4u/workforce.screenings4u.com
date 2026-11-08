@@ -111,3 +111,137 @@
  .wf-employer-page .emp-device-note{padding:6px 8px;min-width:0}
  .wf-employer-page .emp-hero-proof{gap:10px}
 }
+
+/* Approved Employer workflows mockup: four raised panels with framed real portal previews */
+.wf-employer-page .emp-workflow{
+  position:relative;isolation:isolate;overflow:hidden;
+  background:radial-gradient(ellipse at 4% 8%,#eaf0f7 0%,transparent 29%),
+             radial-gradient(ellipse at 96% 89%,#e9eff6 0%,transparent 33%),
+             linear-gradient(180deg,#fff 0%,#f8fafc 100%);
+  padding:68px 0 77px;
+}
+.wf-employer-page .emp-workflow:before,
+.wf-employer-page .emp-workflow:after{
+  content:"";position:absolute;pointer-events:none;z-index:-1;width:370px;height:170px;
+  border-radius:50%;background:#e9eef5;opacity:.42;transform:rotate(-26deg)
+}
+.wf-employer-page .emp-workflow:before{top:-97px;left:-105px}
+.wf-employer-page .emp-workflow:after{bottom:-98px;right:-145px}
+.wf-employer-page .emp-workflow .wf-section-head{max-width:1180px;margin:0 auto 43px}
+.wf-employer-page .emp-workflow .wf-section-head .wf-eyebrow{
+  display:flex;align-items:center;justify-content:center;gap:22px;
+  color:#977400;font-size:11px;letter-spacing:.2em;margin:0 0 17px
+}
+.wf-employer-page .emp-workflow .wf-section-head .wf-eyebrow:before,
+.wf-employer-page .emp-workflow .wf-section-head .wf-eyebrow:after{
+  content:"";width:70px;height:2px;background:#FDC102
+}
+.wf-employer-page .emp-workflow .wf-section-head h2{
+  max-width:none;font-size:clamp(29px,3.35vw,47px);
+  font-weight:900;line-height:1.13;letter-spacing:-.047em;margin:0 auto 13px
+}
+.wf-employer-page .emp-workflow .wf-section-head p{
+  max-width:850px;margin-inline:auto;font-size:16px;line-height:1.55;color:#566377
+}
+.wf-employer-page .emp-workflow-grid{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;
+}
+.wf-employer-page .emp-workflow-card{
+  display:grid;grid-template-columns:minmax(0,49%) minmax(0,51%);
+  min-width:0;min-height:280px;overflow:hidden;
+  border:1px solid #edf0f5;border-radius:22px;background:#fff;
+  padding:26px 25px;align-items:stretch;gap:23px;
+  box-shadow:0 11px 24px #01122f12,0 1px 2px #01122f06;
+  transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease
+}
+.wf-employer-page .emp-workflow-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 19px 32px #01122f1a,0 2px 6px #01122f08;
+  border-color:#dce3ed
+}
+.wf-employer-page .emp-workflow-screen{
+  min-height:0;height:auto;display:flex;align-items:center;justify-content:center;
+  overflow:visible;background:transparent
+}
+.wf-employer-page .emp-workflow-screen-frame{
+  width:100%;aspect-ratio:1.35;max-height:232px;overflow:hidden;
+  border:5px solid #e7ecf3;border-radius:21px;background:#f8fafc;
+  box-shadow:0 6px 12px #01122f17,0 0 0 1px #ced6e0;
+}
+.wf-employer-page .emp-workflow-screen-frame img{
+  display:block;width:100%;height:100%;
+  object-fit:cover;object-position:top left;
+  border-radius:15px;
+  transform:none;transition:transform .25s ease
+}
+.wf-employer-page .emp-workflow-card:hover .emp-workflow-screen-frame img{transform:scale(1.025)}
+.wf-employer-page .emp-workflow-description{
+  display:flex;flex-direction:column;align-items:flex-start;justify-content:center;
+  min-width:0;min-height:0;padding:3px 0 3px;gap:0
+}
+.wf-employer-page .emp-workflow-description:before{
+  content:"";background:#FDC102;width:52px;height:2px;margin:0 0 13px;flex:none
+}
+.wf-employer-page .emp-workflow-description>span{
+  font-size:11px;line-height:1.3;letter-spacing:.11em;font-weight:850;color:#927000
+}
+.wf-employer-page .emp-workflow-description h3{
+  font-size:clamp(20px,1.7vw,26px);letter-spacing:-.035em;
+  line-height:1.14;margin:12px 0 12px;color:#01122F
+}
+.wf-employer-page .emp-workflow-description p{
+  font-size:14px;line-height:1.55;color:#44536a;margin:0 0 22px
+}
+.wf-employer-page .emp-workflow-description .emp-workflow-action{
+  display:inline-flex;align-items:center;justify-content:center;
+  gap:17px;min-height:43px;max-width:100%;margin-top:auto;
+  padding:10px 15px;background:#01122F;color:#fff;
+  border:0;border-bottom:3px solid #FDC102;border-radius:10px;
+  text-decoration:none;font-size:13px;font-weight:850;
+  box-shadow:0 2px 0 #FDC102;
+  transition:background .2s ease,transform .2s ease,box-shadow .2s ease
+}
+.wf-employer-page .emp-workflow-description .emp-workflow-action span{
+  font-size:20px;line-height:1;color:#FDC102
+}
+.wf-employer-page .emp-workflow-description .emp-workflow-action:hover{
+  background:#142b4b;transform:translateY(-2px);
+  box-shadow:0 4px 0 #FDC102
+}
+.wf-employer-page .emp-workflow-description .emp-workflow-action:focus-visible{
+  outline:3px solid #FDC102;outline-offset:3px
+}
+@media(max-width:1200px){
+  .wf-employer-page .emp-workflow-card{
+    grid-template-columns:minmax(0,45%) minmax(0,55%);
+    padding:21px;gap:17px;min-height:260px
+  }
+  .wf-employer-page .emp-workflow-description h3{font-size:21px}
+  .wf-employer-page .emp-workflow-description p{font-size:13px}
+  .wf-employer-page .emp-workflow-description .emp-workflow-action{font-size:11px;padding:9px 11px}
+}
+@media(max-width:950px){
+  .wf-employer-page .emp-workflow-card{
+    grid-template-columns:1fr;gap:18px;padding:20px;min-height:0
+  }
+  .wf-employer-page .emp-workflow-screen-frame{aspect-ratio:16/9;max-height:unset}
+  .wf-employer-page .emp-workflow-description{padding:0 3px 2px}
+  .wf-employer-page .emp-workflow-description .emp-workflow-action{margin-top:6px}
+}
+@media(max-width:650px){
+  .wf-employer-page .emp-workflow{padding:48px 0 54px}
+  .wf-employer-page .emp-workflow-grid{grid-template-columns:1fr;gap:17px}
+  .wf-employer-page .emp-workflow-card{padding:18px;border-radius:18px}
+  .wf-employer-page .emp-workflow .wf-section-head{margin-bottom:25px}
+  .wf-employer-page .emp-workflow .wf-section-head .wf-eyebrow{font-size:9px;gap:9px}
+  .wf-employer-page .emp-workflow .wf-section-head .wf-eyebrow:before,
+  .wf-employer-page .emp-workflow .wf-section-head .wf-eyebrow:after{width:23px}
+  .wf-employer-page .emp-workflow .wf-section-head p{font-size:14px}
+  .wf-employer-page .emp-workflow-description h3{font-size:23px}
+  .wf-employer-page .emp-workflow-description .emp-workflow-action{font-size:13px}
+}
+@media(prefers-reduced-motion:reduce){
+  .wf-employer-page .emp-workflow-card,
+  .wf-employer-page .emp-workflow-screen-frame img,
+  .wf-employer-page .emp-workflow-description .emp-workflow-action{transition:none!important}
+}
