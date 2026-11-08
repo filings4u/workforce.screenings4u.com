@@ -1,0 +1,66 @@
+/* Testing management informational page — distinctive timeline and conversion path */
+.wf-testing-info{--ti-navy:#01122F;--ti-gold:#FDC102}
+.wf-testing-info .ti-hero{background:linear-gradient(113deg,#f8fafc 0%,#fff 65%,#fff8e8);padding:57px 0}
+.wf-testing-info .ti-hero-grid{display:grid;grid-template-columns:minmax(0,.96fr) minmax(0,1.04fr);align-items:center;gap:55px}
+.wf-testing-info .ti-hero-copy h1{font-size:clamp(38px,4vw,61px);line-height:1.1;letter-spacing:-.05em;margin:0 0 19px;font-weight:900}
+.wf-testing-info .ti-hero-copy>p{font-size:16px;line-height:1.73;color:#54627a;margin:0;max-width:630px}
+.wf-testing-info .ti-actions{display:flex;gap:11px;flex-wrap:wrap;margin:25px 0 16px}
+.wf-testing-info .ti-microcopy{font-weight:700;color:#748095;font-size:12px!important}
+.wf-testing-info .ti-hero-display{position:relative;isolation:isolate;padding:22px 15px 35px 10px;min-width:0}
+.wf-testing-info .ti-hero-gold{position:absolute;top:0;left:7%;height:83%;width:42%;transform:skew(-14deg);background:linear-gradient(130deg,#FDC102,#ffe2a4);border-radius:19px;z-index:-1}
+.wf-testing-info .ti-screenshot{background:white;border:1px solid #dce3ed;border-radius:14px;overflow:hidden;box-shadow:0 20px 40px #01122f24}
+.wf-testing-info .ti-screenshot-top{height:32px;background:#01122F;display:flex;align-items:center;gap:5px;padding:0 13px}
+.wf-testing-info .ti-screenshot-top i{width:7px;height:7px;background:#D4D3D4;border-radius:50%}
+.wf-testing-info .ti-screenshot-top i:first-child{background:#FDC102}
+.wf-testing-info .ti-screenshot-top span{font-size:9px;color:white;letter-spacing:.12em;font-weight:800;margin-left:11px}
+.wf-testing-info .ti-screenshot img{width:100%;height:330px;object-fit:cover;object-position:top left;display:block}
+.wf-testing-info .ti-image-label{position:absolute;bottom:0;right:0;font-size:11px;background:#fff;border:1px solid #e1e6ef;border-radius:9px;padding:10px 13px;font-weight:800;box-shadow:0 8px 20px #01122f15}
+.wf-testing-info .ti-pressure{padding:73px 0;background:#fff}
+.wf-testing-info .ti-pressure-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:90px;align-items:center}
+.wf-testing-info .ti-pressure-lead h2{font-size:clamp(30px,3.15vw,44px);letter-spacing:-.045em;line-height:1.16;margin:0 0 17px}
+.wf-testing-info .ti-pressure-lead p{font-size:15px;line-height:1.72;color:#5b6980;margin:0}
+.wf-testing-info .ti-pressure-list{display:grid;gap:14px}
+.wf-testing-info .ti-pressure-list article{display:flex;align-items:start;gap:18px;padding:20px 22px;background:#f8fafc;border:1px solid #e4e9f0;border-radius:12px}
+.wf-testing-info .ti-pressure-list article>span{flex:none;display:grid;place-items:center;width:37px;height:37px;border-radius:10px;background:#fff0b8;color:#745a00;font-size:12px;font-weight:900}
+.wf-testing-info .ti-pressure-list h3{font-size:17px;letter-spacing:-.02em;margin:0 0 6px}
+.wf-testing-info .ti-pressure-list p{font-size:13px;line-height:1.6;color:#657187;margin:0}
+.wf-testing-info .ti-process{padding:74px 0;background:#f8fafc}
+.wf-testing-info .ti-heading{text-align:center;max-width:850px;margin:0 auto 35px}
+.wf-testing-info .ti-heading h2{font-size:clamp(30px,3vw,43px);line-height:1.16;letter-spacing:-.04em;margin:0 0 10px}
+.wf-testing-info .ti-heading p{font-size:15px;line-height:1.67;color:#637088;margin:0}
+.wf-testing-info .ti-process-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.wf-testing-info .ti-process-grid article{display:flex;flex-direction:column;min-width:0;background:white;border:1px solid #e1e7ed;border-radius:15px;padding:30px;box-shadow:0 6px 20px #01122f0a}
+.wf-testing-info .ti-process-number{color:#916d00;font-weight:900;font-size:12px;letter-spacing:.15em;padding-bottom:18px;margin-bottom:24px;border-bottom:2px solid #FDC102}
+.wf-testing-info .ti-process-grid h3{font-size:20px;line-height:1.25;letter-spacing:-.03em;margin:0 0 12px}
+.wf-testing-info .ti-process-grid p{color:#59677d;line-height:1.7;font-size:13px;flex:1;margin:0 0 24px}
+.wf-testing-info .ti-process-grid a{font-size:12px;font-weight:850;align-self:start;border-bottom:2px solid #FDC102;padding-bottom:4px}
+.wf-testing-info .ti-showcase{padding:75px 0;background:#fff}
+.wf-testing-info .ti-showcase-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:65px;align-items:center}
+.wf-testing-info .ti-showcase-copy h2{font-size:clamp(30px,3vw,43px);letter-spacing:-.045em;line-height:1.14;margin:0 0 15px}
+.wf-testing-info .ti-showcase-copy p{color:#58667c;font-size:15px;line-height:1.72;margin:0 0 19px}
+.wf-testing-info .ti-showcase-copy ul{list-style:none;padding:0;display:grid;gap:12px;margin:0 0 25px}
+.wf-testing-info .ti-showcase-copy li{display:flex;align-items:flex-start;gap:11px;font-weight:650;font-size:14px}
+.wf-testing-info .ti-showcase-copy li:before{content:"✓";display:grid;place-items:center;width:21px;height:21px;border-radius:50%;background:#FDC102;flex:none;font-weight:900;font-size:12px}
+.wf-testing-info .ti-showcase-media{border:1px solid #dce4ee;overflow:hidden;border-radius:15px;background:#fff;box-shadow:0 19px 40px #01122f15}
+.wf-testing-info .ti-showcase-header{background:#01122F;color:white;display:flex;justify-content:space-between;gap:10px;padding:12px 15px;font-size:10px;letter-spacing:.1em;font-weight:850}
+.wf-testing-info .ti-showcase-media img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top left}
+.wf-testing-info .ti-guidance{background:#01122F;color:#fff;padding:33px 0}
+.wf-testing-info .ti-guidance-inner{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:45px}
+.wf-testing-info .ti-guidance .wf-eyebrow{color:#FDC102}
+.wf-testing-info .ti-guidance h2{color:#fff;font-size:clamp(23px,2.1vw,31px);line-height:1.2;margin:0}
+.wf-testing-info .ti-guidance p{color:#d2deec;font-size:13px;line-height:1.72;margin:0}
+.wf-testing-info .ti-options{padding:76px 0 86px;background:#f8fafc}
+.wf-testing-info .ti-option-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:19px}
+.wf-testing-info .ti-option{border:1px solid #e1e7ee;background:white;display:flex;flex-direction:column;min-width:0;border-radius:15px;padding:28px;transition:transform .2s,border-color .2s,box-shadow .2s}
+.wf-testing-info .ti-option:hover{transform:translateY(-4px);border-color:#FDC102;box-shadow:0 16px 32px #01122f14}
+.wf-testing-info .ti-option-top{font-size:10px;font-weight:900;letter-spacing:.14em;color:#957200;margin-bottom:20px}
+.wf-testing-info .ti-option h3{font-size:22px;letter-spacing:-.03em;line-height:1.25;margin:0 0 13px}
+.wf-testing-info .ti-option p{font-size:13px;line-height:1.7;color:#5e6c82;margin:0 0 20px;flex:1}
+.wf-testing-info .ti-option-rate{font-weight:900;font-size:13px;margin-bottom:19px}
+.wf-testing-info .ti-option-button{display:flex;justify-content:space-between;align-items:center;gap:10px;background:#01122F;color:#fff;border-radius:8px;padding:12px 14px;border-bottom:3px solid #FDC102;font-size:12px;font-weight:850}
+.wf-testing-info .ti-option-button span{font-size:17px;color:#FDC102}
+.wf-testing-info a:focus-visible{outline:3px solid #FDC102;outline-offset:3px}
+@media(max-width:1100px){.wf-testing-info .ti-hero-grid,.wf-testing-info .ti-pressure-grid,.wf-testing-info .ti-showcase-grid{gap:27px}.wf-testing-info .ti-screenshot img{height:275px}}
+@media(max-width:850px){.wf-testing-info .ti-hero{padding:18px 0 43px}.wf-testing-info .ti-hero-grid{display:flex;flex-direction:column;gap:16px;align-items:stretch}.wf-testing-info .ti-hero-display{order:-1;max-width:600px;width:100%;margin:auto}.wf-testing-info .ti-screenshot img{height:clamp(195px,44vw,290px)}.wf-testing-info .ti-hero-copy h1{font-size:clamp(34px,6vw,48px)}.wf-testing-info .ti-pressure-grid,.wf-testing-info .ti-showcase-grid,.wf-testing-info .ti-guidance-inner{grid-template-columns:1fr}.wf-testing-info .ti-option-grid{grid-template-columns:1fr;max-width:600px;margin:auto}.wf-testing-info .ti-process-grid{grid-template-columns:1fr;max-width:600px;margin:auto}}
+@media(max-width:550px){.wf-testing-info .ti-pressure,.wf-testing-info .ti-process,.wf-testing-info .ti-showcase,.wf-testing-info .ti-options{padding:45px 0}.wf-testing-info .ti-hero-display{padding:13px 10px 24px 5px}.wf-testing-info .ti-screenshot img{height:190px}.wf-testing-info .ti-actions .btn{width:100%}.wf-testing-info .ti-showcase-header{font-size:8px}.wf-testing-info .ti-guidance{padding:28px 0}}
+@media(prefers-reduced-motion:reduce){.wf-testing-info .ti-option{transition:none!important}}
