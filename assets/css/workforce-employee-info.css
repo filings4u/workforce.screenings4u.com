@@ -1,0 +1,65 @@
+/* Employee Management informational page — unique layouts, shared Workforce identity */
+.wf-people-info{--ep-navy:#01122F;--ep-gold:#FDC102}
+.wf-people-info .ep-hero{background:linear-gradient(120deg,#f7f9fc 0%,#fff 55%,#fff8e8);padding:58px 0 62px}
+.wf-people-info .ep-hero-layout{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);align-items:center;gap:56px}
+.wf-people-info .ep-hero-copy h1{font-size:clamp(38px,3.9vw,59px);line-height:1.1;letter-spacing:-.052em;font-weight:900;margin:0 0 19px}
+.wf-people-info .ep-hero-copy>p{font-size:16px;line-height:1.73;color:#526279;max-width:620px;margin:0}
+.wf-people-info .ep-hero-actions{display:flex;flex-wrap:wrap;gap:11px;margin:26px 0 22px}
+.wf-people-info .ep-hero-note{display:flex;align-items:center;gap:10px;font-weight:700;color:#66748b;font-size:12px}
+.wf-people-info .ep-hero-note>span{width:22px;height:22px;flex:none;display:grid;place-items:center;border-radius:50%;background:#FDC102;color:#01122F;font-weight:900}
+.wf-people-info .ep-hero-screen{position:relative;isolation:isolate;padding:24px 13px 32px 14px;min-width:0}
+.wf-people-info .ep-screen-accent{position:absolute;z-index:-1;left:7%;top:0;height:85%;width:42%;border-radius:20px;transform:skew(-14deg);background:linear-gradient(140deg,#FDC102,#ffe6aa)}
+.wf-people-info .ep-screen-window{border:1px solid #dfe5ee;background:white;border-radius:14px;overflow:hidden;box-shadow:0 19px 43px #01122f22}
+.wf-people-info .ep-window-bar{display:flex;align-items:center;gap:5px;background:#01122F;padding:0 13px;height:32px}
+.wf-people-info .ep-window-bar span{width:7px;height:7px;border-radius:50%;background:#D4D3D4}
+.wf-people-info .ep-window-bar span:first-child{background:#FDC102}
+.wf-people-info .ep-window-bar b{color:white;font-size:9px;letter-spacing:.12em;margin-left:9px}
+.wf-people-info .ep-screen-window img{display:block;width:100%;height:325px;object-fit:cover;object-position:top left}
+.wf-people-info .ep-screen-caption{position:absolute;right:0;bottom:0;background:white;border:1px solid #e1e6ed;border-radius:8px;padding:9px 13px;font-weight:800;font-size:11px;box-shadow:0 8px 22px #01122f16}
+.wf-people-info .ep-pain{padding:69px 0;background:#fff}
+.wf-people-info .ep-pain-header,.wf-people-info .ep-lifecycle-heading,.wf-people-info .ep-audience-heading{text-align:center;max-width:890px;margin:0 auto 32px}
+.wf-people-info .ep-pain-header h2,.wf-people-info .ep-lifecycle-heading h2,.wf-people-info .ep-audience-heading h2{font-size:clamp(29px,3vw,42px);letter-spacing:-.044em;line-height:1.16;margin:0 0 11px}
+.wf-people-info .ep-pain-header p,.wf-people-info .ep-lifecycle-heading p,.wf-people-info .ep-audience-heading p{font-size:15px;line-height:1.64;color:#617087;margin:0}
+.wf-people-info .ep-pain-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.wf-people-info .ep-pain-grid article{border:1px solid #e1e7ee;border-radius:15px;background:#fbfcfe;padding:30px;min-height:210px}
+.wf-people-info .ep-pain-grid article>span{display:block;color:#997400;font-weight:900;font-size:10px;letter-spacing:.14em;margin-bottom:22px}
+.wf-people-info .ep-pain-grid h3{font-size:19px;line-height:1.24;letter-spacing:-.025em;margin:0 0 11px}
+.wf-people-info .ep-pain-grid p{font-size:13px;line-height:1.68;color:#57667e;margin:0}
+.wf-people-info .ep-benefits{padding:72px 0;background:#f7f9fc}
+.wf-people-info .ep-benefits-grid{display:grid;grid-template-columns:.93fr 1.07fr;gap:72px;align-items:center}
+.wf-people-info .ep-benefits-copy h2{font-size:clamp(31px,3vw,44px);letter-spacing:-.045em;line-height:1.14;margin:0 0 15px}
+.wf-people-info .ep-benefits-copy>p{color:#59677c;font-size:15px;line-height:1.73;margin:0 0 25px}
+.wf-people-info .ep-benefit-list{display:grid;gap:22px}
+.wf-people-info .ep-benefit-list>div{display:flex;align-items:flex-start;gap:12px}
+.wf-people-info .ep-check{display:grid;place-items:center;flex:none;width:25px;height:25px;border-radius:50%;background:#FDC102;color:#01122F;font-size:13px;font-weight:900}
+.wf-people-info .ep-benefit-list h3{font-size:15px;margin:0 0 5px}
+.wf-people-info .ep-benefit-list p{margin:0;color:#647187;font-size:13px;line-height:1.58}
+.wf-people-info .ep-benefits-media{background:white;border:1px solid #e0e6ee;border-radius:14px;overflow:hidden;box-shadow:0 18px 42px #01122f16}
+.wf-people-info .ep-benefits-media img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top left}
+.wf-people-info .ep-media-foot{display:flex;gap:8px;align-items:center;padding:13px 18px;color:#647087;font-size:11px;font-weight:700}
+.wf-people-info .ep-dot{width:8px;height:8px;border-radius:50%;background:#FDC102}
+.wf-people-info .ep-lifecycle{padding:75px 0;background:#fff}
+.wf-people-info .ep-lifecycle-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:19px}
+.wf-people-info .ep-lifecycle-grid article{display:flex;flex-direction:column;border:1px solid #e0e6ed;border-radius:15px;overflow:hidden;min-width:0;box-shadow:0 7px 20px #01122f0b}
+.wf-people-info .ep-life-image{overflow:hidden;height:202px;background:#eef2f7}
+.wf-people-info .ep-life-image img{display:block;width:100%;height:100%;object-fit:cover;object-position:top left}
+.wf-people-info .ep-life-number{font-size:11px;font-weight:900;color:#997400;letter-spacing:.12em;margin:21px 23px 12px}
+.wf-people-info .ep-lifecycle-grid h3{font-size:20px;letter-spacing:-.035em;margin:0 23px 10px}
+.wf-people-info .ep-lifecycle-grid p{font-size:13px;line-height:1.65;color:#5b6a81;margin:0 23px 22px;flex:1}
+.wf-people-info .ep-lifecycle-grid a{display:inline-flex;align-self:start;font-size:12px;font-weight:850;gap:10px;margin:0 23px 23px;border-bottom:2px solid #FDC102;padding-bottom:4px}
+.wf-people-info .ep-audience{background:#f8fafc;padding:73px 0 79px}
+.wf-people-info .ep-audience-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:19px}
+.wf-people-info .ep-audience-card{display:flex;flex-direction:column;align-items:flex-start;background:#fff;border:1px solid #e0e6ef;border-radius:15px;padding:28px;min-height:320px;transition:transform .2s,border-color .2s,box-shadow .2s}
+.wf-people-info .ep-audience-card:hover{transform:translateY(-4px);border-color:#FDC102;box-shadow:0 16px 33px #01122f17}
+.wf-people-info .ep-audience-label{font-size:10px;letter-spacing:.14em;color:#967200;font-weight:900;margin-bottom:15px}
+.wf-people-info .ep-audience-card h3{font-size:23px;line-height:1.22;letter-spacing:-.03em;margin:0 0 13px}
+.wf-people-info .ep-audience-card p{font-size:13px;line-height:1.66;color:#5e6b80;margin:0 0 17px;flex:1}
+.wf-people-info .ep-audience-pricing{font-size:13px;font-weight:900;margin:0 0 18px}
+.wf-people-info .ep-audience-link{width:100%;background:#01122F;color:#fff;border-radius:8px;border-bottom:3px solid #FDC102;padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:15px;font-size:12px;font-weight:850}
+.wf-people-info .ep-audience-link span{color:#FDC102;font-size:17px}
+.wf-people-info .ep-audience-note{margin:22px auto 0;max-width:850px;text-align:center;font-size:12px;line-height:1.7;color:#627087}
+.wf-people-info a:focus-visible{outline:3px solid #FDC102;outline-offset:3px}
+@media(max-width:1100px){.wf-people-info .ep-hero-layout,.wf-people-info .ep-benefits-grid{gap:27px}.wf-people-info .ep-screen-window img{height:280px}.wf-people-info .ep-life-image{height:180px}}
+@media(max-width:850px){.wf-people-info .ep-hero{padding:20px 0 44px}.wf-people-info .ep-hero-layout{display:flex;flex-direction:column;align-items:stretch;gap:18px}.wf-people-info .ep-hero-screen{order:-1;width:100%;max-width:590px;margin:auto}.wf-people-info .ep-screen-window img{height:clamp(195px,45vw,290px)}.wf-people-info .ep-hero-copy h1{font-size:clamp(33px,6vw,47px)}.wf-people-info .ep-benefits-grid{grid-template-columns:1fr}.wf-people-info .ep-pain-grid{grid-template-columns:1fr}.wf-people-info .ep-pain-grid article{min-height:0}.wf-people-info .ep-lifecycle-grid{grid-template-columns:1fr;max-width:600px;margin:0 auto}.wf-people-info .ep-life-image{height:240px}.wf-people-info .ep-audience-grid{grid-template-columns:1fr;max-width:600px;margin:0 auto}.wf-people-info .ep-audience-card{min-height:0}}
+@media(max-width:550px){.wf-people-info .ep-pain,.wf-people-info .ep-benefits,.wf-people-info .ep-lifecycle,.wf-people-info .ep-audience{padding:47px 0}.wf-people-info .ep-hero-actions .btn{width:100%}.wf-people-info .ep-hero-screen{padding:15px 10px 22px 6px}.wf-people-info .ep-screen-window img{height:190px}.wf-people-info .ep-life-image{height:190px}.wf-people-info .ep-audience-card{padding:24px 21px}}
+@media(prefers-reduced-motion:reduce){.wf-people-info .ep-audience-card{transition:none!important}}
