@@ -1,0 +1,37 @@
+/* Additional platform information pages — full-width responsive layout */
+.wf-extra-info{--ex-navy:#01122F;--ex-gold:#FDC102}
+.wf-extra-info .ex-hero{background:linear-gradient(112deg,#f7f9fc,#fff 64%,#fff8e8);padding:56px 0}
+.wf-extra-info .ex-grid{display:grid;grid-template-columns:.95fr 1.05fr;align-items:center;gap:55px}
+.wf-extra-info .ex-hero h1{font-size:clamp(36px,3.8vw,59px);font-weight:900;line-height:1.1;letter-spacing:-.05em;margin:0 0 18px}
+.wf-extra-info .ex-hero p{font-size:16px;line-height:1.73;color:#56657b;margin:0}
+.wf-extra-info .ex-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.wf-extra-info .ex-preview{border:1px solid #dfe5ef;border-radius:14px;background:#fff;box-shadow:0 18px 38px #01122f1e;overflow:hidden;min-width:0}
+.wf-extra-info .ex-preview-label{padding:13px 17px;background:#01122F;color:#fff;font-size:10px;letter-spacing:.13em;font-weight:900}
+.wf-extra-info .ex-preview img{width:100%;height:315px;display:block;object-fit:cover;object-position:top left}
+.wf-extra-info .ex-preview>span{display:block;font-size:11px;color:#61738b;font-weight:750;padding:10px 16px}
+.wf-extra-info .ex-section{padding:72px 0}
+.wf-extra-info .ex-heading{text-align:center;max-width:875px;margin:0 auto 32px}
+.wf-extra-info .ex-heading h2,.wf-extra-info .ex-feature h2{font-size:clamp(29px,3vw,43px);letter-spacing:-.045em;line-height:1.17;margin:0 0 13px}
+.wf-extra-info .ex-heading p,.wf-extra-info .ex-feature p{font-size:15px;line-height:1.7;color:#5f6e84;margin:0}
+.wf-extra-info .ex-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:19px}
+.wf-extra-info .ex-cards article,.wf-extra-info .ex-products>a{background:white;border:1px solid #e0e6ed;border-radius:14px;padding:28px;display:flex;flex-direction:column;align-items:start}
+.wf-extra-info .ex-cards article>span,.wf-extra-info .ex-products>a>span{font-size:11px;font-weight:900;letter-spacing:.12em;color:#957000;margin-bottom:21px}
+.wf-extra-info .ex-cards article h3,.wf-extra-info .ex-products h3{font-size:21px;line-height:1.25;letter-spacing:-.025em;margin:0 0 12px}
+.wf-extra-info .ex-cards article p,.wf-extra-info .ex-products p{font-size:13px;line-height:1.7;color:#5a6981;margin:0}
+.wf-extra-info .ex-feature,.wf-extra-info .ex-plans{background:#f7f9fc}
+.wf-extra-info .ex-feature .ex-preview img{aspect-ratio:16/10;height:auto}
+.wf-extra-info .ex-feature ul{padding:0;list-style:none;margin:23px 0 26px;display:grid;gap:12px}
+.wf-extra-info .ex-feature li{display:flex;gap:10px;align-items:start;font-size:14px;font-weight:650}
+.wf-extra-info .ex-feature li:before{content:"✓";width:20px;height:20px;flex:none;border-radius:50%;background:#FDC102;display:grid;place-items:center;font-size:12px;font-weight:900}
+.wf-extra-info .ex-disclaimer{background:#01122F;color:#d1deec;padding:25px 0;font-size:13px;line-height:1.75}
+.wf-extra-info .ex-disclaimer strong{color:#FDC102}
+.wf-extra-info .ex-products>a{min-height:305px;transition:transform .2s,border-color .2s}
+.wf-extra-info .ex-products>a:hover{border-color:#FDC102;transform:translateY(-4px)}
+.wf-extra-info .ex-products p{flex:1;margin-bottom:20px}
+.wf-extra-info .ex-products strong{font-size:13px;margin-bottom:19px}
+.wf-extra-info .ex-products b{background:#01122F;color:#fff;border-bottom:3px solid #FDC102;border-radius:8px;padding:12px 14px;width:100%;font-size:12px}
+.wf-extra-info a:focus-visible{outline:3px solid #FDC102;outline-offset:3px}
+@media(max-width:980px){.wf-extra-info .ex-grid{gap:27px}}
+@media(max-width:850px){.wf-extra-info .ex-hero{padding:17px 0 42px}.wf-extra-info .ex-hero .ex-grid{display:flex;flex-direction:column;align-items:stretch;gap:18px}.wf-extra-info .ex-hero .ex-preview{order:-1;max-width:610px;width:100%;margin:0 auto}.wf-extra-info .ex-preview img{height:clamp(195px,44vw,300px)}.wf-extra-info .ex-feature .ex-grid{grid-template-columns:1fr}.wf-extra-info .ex-hero h1{font-size:clamp(33px,6vw,48px)}.wf-extra-info .ex-cards{grid-template-columns:1fr;max-width:630px;margin:0 auto}.wf-extra-info .ex-products>a{min-height:0}}
+@media(max-width:550px){.wf-extra-info .ex-section{padding:45px 0}.wf-extra-info .ex-actions .btn{width:100%}.wf-extra-info .ex-preview img{height:190px}.wf-extra-info .ex-feature .ex-preview img{height:auto}}
+@media(prefers-reduced-motion:reduce){.wf-extra-info .ex-products>a{transition:none!important}}
