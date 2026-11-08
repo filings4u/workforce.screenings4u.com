@@ -1,0 +1,48 @@
+/* Owner-Operator product page, distinct driver-focused design */
+.owner-page{--oo-navy:#01122F;--oo-gold:#FDC102;--oo-silver:#D4D3D4}
+.owner-page .oo-hero{background:linear-gradient(110deg,#f8fafc 0%,#fff 53%,#fff8e6);overflow:hidden}
+.owner-page .oo-hero-grid{display:grid;grid-template-columns:minmax(0,.91fr) minmax(0,1.09fr);gap:45px;align-items:center;min-height:435px}
+.owner-page .oo-hero-copy{padding:56px 0;min-width:0}
+.owner-page .oo-hero-copy h1{font-size:clamp(37px,3.85vw,59px);line-height:1.1;letter-spacing:-.052em;font-weight:900;margin:0 0 20px;max-width:675px}
+.owner-page .oo-hero-copy p{font-size:16px;line-height:1.7;color:#52617b;max-width:605px;margin:0 0 26px}
+.owner-page .oo-buttons{display:flex;flex-wrap:wrap;gap:11px}
+.owner-page .oo-hero-art{height:420px;align-self:stretch;position:relative;isolation:isolate;overflow:hidden}
+.owner-page .oo-hero-photo{height:100%;width:100%;background-image:url("../../images/Confident%20Logistics%20Team%20Portrait.png");background-size:cover;background-position:center 43%;background-color:#e5eaf0;clip-path:polygon(15% 0,100% 0,100% 100%,0 100%)}
+.owner-page .oo-hero-gold{position:absolute;top:-7%;bottom:-7%;left:12%;width:13px;background:#FDC102;transform:rotate(15deg);z-index:2;pointer-events:none}
+.owner-page .oo-benefit-band{background:#fff;border-block:1px solid #e6ebf2}
+.owner-page .oo-benefit-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));padding:23px 0}
+.owner-page .oo-benefit-grid>div{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;text-align:center;padding:10px 13px;border-right:1px solid #D4D3D4}
+.owner-page .oo-benefit-grid>div:last-child{border-right:0}
+.owner-page .oo-benefit-icon{display:grid;place-items:center;width:34px;height:34px;font-size:23px;line-height:1;color:#b88c00}
+.owner-page .oo-benefit-grid strong{font-size:14px;line-height:1.35}
+.owner-page .oo-showcase{background:#fff;padding:70px 0}
+.owner-page .oo-showcase-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:65px;align-items:center}
+.owner-page .oo-showcase-device{isolation:isolate;position:relative;padding:26px 26px 35px 19px;min-width:0}
+.owner-page .oo-device-accent{position:absolute;inset:6px auto 17% 3px;width:42%;border-radius:17px;background:linear-gradient(135deg,#FDC102,#ffe2a1);transform:skew(-13deg);z-index:-1}
+.owner-page .oo-device-screen{border-radius:15px;overflow:hidden;background:#fff;border:7px solid #14213a;box-shadow:0 18px 39px #01122f24}
+.owner-page .oo-device-bar{height:28px;display:flex;align-items:center;gap:5px;color:#fff;font-size:10px;letter-spacing:.1em;background:#01122F;padding:0 11px}
+.owner-page .oo-device-bar span{width:6px;height:6px;border-radius:50%;background:#D4D3D4}
+.owner-page .oo-device-bar span:first-child{background:#FDC102}
+.owner-page .oo-device-bar b{margin-left:9px;font-size:9px}
+.owner-page .oo-device-screen img{width:100%;height:300px;display:block;object-fit:cover;object-position:top left}
+.owner-page .oo-device-caption{position:absolute;right:0;bottom:2px;border:1px solid #e1e7ee;border-radius:8px;background:#fff;padding:9px 13px;font-size:11px;font-weight:800;box-shadow:0 10px 22px #01122f15}
+.owner-page .oo-showcase-copy h2{font-size:clamp(30px,3vw,45px);line-height:1.13;letter-spacing:-.04em;margin:0 0 15px}
+.owner-page .oo-showcase-copy>p{font-size:15px;line-height:1.7;color:#54627a;margin:0 0 20px}
+.owner-page .oo-checklist{list-style:none;padding:0;margin:0 0 25px;display:grid;gap:11px}
+.owner-page .oo-checklist li{display:flex;gap:11px;align-items:flex-start;font-size:14px;font-weight:650}
+.owner-page .oo-checklist li:before{content:"✓";background:#FDC102;color:#01122F;width:20px;height:20px;border-radius:50%;display:grid;place-items:center;flex:none;font-weight:900;font-size:12px}
+.owner-page .oo-steps{padding:57px 0 65px;background:#f7f9fc}
+.owner-page .oo-section-heading{text-align:center;max-width:800px;margin:0 auto 28px}
+.owner-page .oo-section-heading h2{font-size:clamp(29px,2.9vw,40px);letter-spacing:-.04em;line-height:1.16;margin:0 0 9px}
+.owner-page .oo-section-heading p{font-size:14px;color:#607088;margin:0}
+.owner-page .oo-step-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.owner-page .oo-step{border-radius:14px;background:#fff;border:1px solid #e2e7ef;padding:25px 23px;display:flex;align-items:start;gap:17px;min-height:142px;box-shadow:0 6px 16px #01122f07}
+.owner-page .oo-step-number{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#FDC102;color:#01122F;font-size:15px;font-weight:900;flex:none}
+.owner-page .oo-step h3{font-size:18px;margin:0 0 9px;letter-spacing:-.025em}
+.owner-page .oo-step p{color:#5c6c83;font-size:13px;line-height:1.55;margin:0}
+.owner-page .emp-pricing{background:white;scroll-margin-top:28px}
+.owner-page .emp-faq{background:#f8fafc}
+.owner-page a:focus-visible{outline:3px solid #FDC102;outline-offset:3px}
+@media(max-width:1100px){.owner-page .oo-hero-grid{gap:20px}.owner-page .oo-hero-art{height:370px}.owner-page .oo-showcase-grid{gap:30px}.owner-page .oo-device-screen img{height:265px}}
+@media(max-width:850px){.owner-page .oo-hero-grid{display:flex;flex-direction:column;gap:0;align-items:stretch}.owner-page .oo-hero-art{order:-1;height:290px;margin:0 -18px}.owner-page .oo-hero-photo{clip-path:none;background-position:center 40%}.owner-page .oo-hero-gold{left:auto;right:12%;width:10px}.owner-page .oo-hero-copy{padding:32px 0 45px}.owner-page .oo-hero-copy h1{font-size:clamp(34px,6vw,48px)}.owner-page .oo-showcase-grid{grid-template-columns:1fr;gap:24px}.owner-page .oo-showcase-device{max-width:630px;width:100%;margin:auto}.owner-page .oo-step-grid{grid-template-columns:1fr}.owner-page .oo-benefit-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.owner-page .oo-benefit-grid>div:nth-child(2){border-right:0}.owner-page .oo-benefit-grid>div{border-bottom:1px solid #e6ebf2}.owner-page .oo-benefit-grid>div:nth-child(n+3){border-bottom:0}}
+@media(max-width:480px){.owner-page .oo-hero-art{height:235px}.owner-page .oo-buttons .btn{width:100%}.owner-page .oo-showcase,.owner-page .oo-steps{padding:44px 0}.owner-page .oo-device-screen img{height:195px}.owner-page .oo-device-screen{border-width:5px}.owner-page .oo-step{padding:21px 17px;min-height:0}.owner-page .oo-benefit-grid strong{font-size:12px}.owner-page .oo-device-caption{font-size:9px;padding:6px 9px}}
