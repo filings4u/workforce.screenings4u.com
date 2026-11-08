@@ -1,0 +1,62 @@
+/* Resource center and FAQ — Workforce design system */
+.wr-resource,.wr-faq{--wr-navy:#01122F;--wr-gold:#FDC102}
+.wr-resource .wr-hero{background:linear-gradient(110deg,#f7f9fc,#fff 65%,#fff8e6);padding:65px 0}
+.wr-resource .wr-hero-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:55px}
+.wr-resource .wr-hero h1,.wr-faq .wr-faq-hero h1{font-size:clamp(37px,4vw,60px);line-height:1.09;letter-spacing:-.05em;margin:0 0 18px}
+.wr-resource .wr-hero p,.wr-faq .wr-faq-hero p{font-size:16px;line-height:1.73;color:#5b6a82;margin:0;max-width:650px}
+.wr-resource .wr-actions,.wr-faq .wr-actions{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0 0}
+.wr-resource .wr-hero-shot{border-radius:15px;overflow:hidden;background:white;border:1px solid #e0e6ed;box-shadow:0 20px 39px #01122f1c}
+.wr-resource .wr-window-title{background:#01122F;color:#fff;padding:13px 16px;letter-spacing:.14em;font-size:10px;font-weight:900}
+.wr-resource .wr-hero-shot img{display:block;width:100%;height:315px;object-fit:cover;object-position:top left}
+.wr-resource .wr-hero-shot>span{display:block;font-size:11px;font-weight:750;color:#65738a;padding:12px 16px}
+.wr-resource .wr-section,.wr-faq .wr-section{padding:76px 0}
+.wr-resource .wr-heading{text-align:center;max-width:850px;margin:0 auto 34px}
+.wr-resource .wr-heading h2{font-size:clamp(28px,3vw,43px);line-height:1.17;letter-spacing:-.045em;margin:0 0 12px}
+.wr-resource .wr-heading p{font-size:15px;line-height:1.68;color:#637188;margin:0}
+.wr-resource .wr-topic-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.wr-resource .wr-topic-grid>a,.wr-resource .wr-action-grid>a{display:flex;align-items:start;flex-direction:column;background:#fff;border:1px solid #dfe6ed;border-radius:14px;padding:25px;transition:border-color .2s,transform .2s;min-width:0}
+.wr-resource .wr-topic-grid>a:hover,.wr-resource .wr-action-grid>a:hover{border-color:#FDC102;transform:translateY(-4px)}
+.wr-resource .wr-topic-grid>a>span,.wr-resource .wr-action-grid>a>span{font-size:10px;font-weight:900;letter-spacing:.14em;color:#906d00;margin-bottom:19px}
+.wr-resource .wr-topic-grid h3,.wr-resource .wr-action-grid h3{font-size:19px;line-height:1.25;letter-spacing:-.025em;margin:0 0 12px}
+.wr-resource .wr-topic-grid p,.wr-resource .wr-action-grid p{font-size:13px;line-height:1.67;color:#5c6980;flex:1;margin:0 0 21px}
+.wr-resource .wr-topic-grid b,.wr-resource .wr-action-grid b{font-size:12px;font-weight:900;border-bottom:2px solid #FDC102;padding-bottom:4px}
+.wr-resource .wr-band{background:#01122F;padding:40px 0;color:white}
+.wr-resource .wr-band-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}
+.wr-resource .wr-band .wf-eyebrow{color:#FDC102}
+.wr-resource .wr-band h2{color:#fff;font-size:clamp(27px,2.8vw,40px);letter-spacing:-.04em;line-height:1.15;margin:0 0 12px}
+.wr-resource .wr-band p{color:#d2ddec;font-size:14px;line-height:1.7;margin:0}
+.wr-resource .wr-agencies{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.wr-resource .wr-agencies a{display:grid;place-items:center;padding:19px 9px;background:#ffffff12;border:1px solid #ffffff3c;border-radius:10px;color:#fff;font-size:16px;font-weight:900}
+.wr-resource .wr-agencies a:hover{background:#FDC102;color:#01122F}
+.wr-resource .wr-steps{background:#f7f9fc}
+.wr-resource .wr-action-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.wr-resource .wr-caution{padding:25px 0;background:#fff8e7;color:#58657a;font-size:13px;line-height:1.7}
+.wr-resource .wr-caution strong{color:#01122F}
+.wr-faq .wr-faq-hero{background:linear-gradient(110deg,#f7f9fc,#fff 70%,#fff8e7);padding:72px 0 77px}
+.wr-faq .wr-faq-layout{display:grid;grid-template-columns:285px minmax(0,1fr);gap:70px;align-items:start}
+.wr-faq .wr-faq-sidebar{position:sticky;top:95px}
+.wr-faq .wr-faq-sidebar h2{font-size:27px;line-height:1.17;letter-spacing:-.04em;margin:0 0 25px}
+.wr-faq .wr-faq-sidebar nav{display:grid;gap:10px}
+.wr-faq .wr-faq-sidebar nav a{border:1px solid #e2e8ef;border-radius:9px;background:#f7f9fc;padding:13px 15px;font-weight:750;font-size:13px}
+.wr-faq .wr-side-card{border-radius:13px;padding:22px;background:#01122F;color:white;margin-top:27px}
+.wr-faq .wr-side-card h3{color:white;font-size:18px;margin:0 0 10px}
+.wr-faq .wr-side-card p{font-size:13px;line-height:1.65;color:#cbd6e5;margin:0 0 15px}
+.wr-faq .wr-side-card a{font-weight:800;color:#FDC102;font-size:12px}
+.wr-faq .wr-faq-answers>section{margin:0 0 44px;scroll-margin-top:90px}
+.wr-faq .wr-faq-answers h2{font-size:clamp(26px,2.6vw,36px);letter-spacing:-.04em;line-height:1.2;margin:0 0 22px}
+.wr-faq .wr-faq-answers details{border:1px solid #e0e6ef;border-radius:11px;margin-bottom:11px;background:white;overflow:hidden}
+.wr-faq .wr-faq-answers summary{cursor:pointer;list-style:none;position:relative;padding:19px 46px 19px 20px;font-weight:800;font-size:14px}
+.wr-faq .wr-faq-answers summary::-webkit-details-marker{display:none}
+.wr-faq .wr-faq-answers summary:after{content:"+";position:absolute;right:19px;top:50%;transform:translateY(-50%);font-size:22px;color:#997400;font-weight:550}
+.wr-faq .wr-faq-answers details[open] summary:after{content:"−"}
+.wr-faq .wr-faq-answers details[open] summary{background:#f8fafc}
+.wr-faq .wr-faq-answers details p{font-size:13px;line-height:1.8;color:#56647a;padding:0 20px 22px;margin:16px 0 0}
+.wr-faq .wr-faq-answers details a{color:#01122F;text-decoration:underline;text-underline-offset:3px;font-weight:750}
+.wr-faq .wr-faq-final{background:#01122F;color:#fff;padding:54px 0;text-align:center}
+.wr-faq .wr-faq-final h2{font-size:clamp(29px,3vw,41px);letter-spacing:-.04em;color:#fff;margin:0 0 12px}
+.wr-faq .wr-faq-final p{font-size:14px;color:#d2dceb;margin:0 0 23px}
+.wr-resource a:focus-visible,.wr-faq a:focus-visible,.wr-faq summary:focus-visible{outline:3px solid #FDC102;outline-offset:3px}
+@media(max-width:1150px){.wr-resource .wr-topic-grid,.wr-resource .wr-action-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:850px){.wr-resource .wr-hero{padding:25px 0 49px}.wr-resource .wr-hero-grid{display:flex;flex-direction:column;align-items:stretch;gap:25px}.wr-resource .wr-hero-shot{order:-1;max-width:610px;width:100%;margin:auto}.wr-resource .wr-hero-shot img{height:clamp(190px,43vw,295px)}.wr-resource .wr-band-grid{grid-template-columns:1fr}.wr-faq .wr-faq-layout{grid-template-columns:1fr;gap:35px}.wr-faq .wr-faq-sidebar{position:static}.wr-faq .wr-faq-sidebar nav{grid-template-columns:repeat(3,minmax(0,1fr))}.wr-faq .wr-side-card{display:none}}
+@media(max-width:550px){.wr-resource .wr-section,.wr-faq .wr-section{padding:45px 0}.wr-resource .wr-topic-grid,.wr-resource .wr-action-grid{grid-template-columns:1fr}.wr-resource .wr-actions .btn,.wr-faq .wr-actions .btn{width:100%}.wr-resource .wr-agencies{grid-template-columns:repeat(2,1fr)}.wr-faq .wr-faq-hero{padding:48px 0}.wr-faq .wr-faq-sidebar nav{grid-template-columns:1fr}.wr-resource .wr-band{padding:31px 0}}
+@media(prefers-reduced-motion:reduce){.wr-resource .wr-topic-grid>a,.wr-resource .wr-action-grid>a{transition:none!important}}
