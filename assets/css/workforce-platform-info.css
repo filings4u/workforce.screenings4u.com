@@ -1,0 +1,62 @@
+/* Workforce informational platform overview; unique page, three-product funnel */
+.wf-platform-info{--pi-navy:#01122F;--pi-gold:#FDC102}
+.wf-platform-info .pi-hero{background:linear-gradient(115deg,#f7f9fc 0%,#fff 62%,#fff8e7 100%);padding:59px 0}
+.wf-platform-info .pi-hero-grid{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:54px;align-items:center}
+.wf-platform-info .pi-hero-text h1{font-size:clamp(38px,3.9vw,60px);line-height:1.1;letter-spacing:-.052em;font-weight:900;max-width:680px;margin:0 0 20px}
+.wf-platform-info .pi-hero-text>p{font-size:16px;line-height:1.73;color:#54647b;max-width:600px;margin:0}
+.wf-platform-info .pi-hero-actions{display:flex;flex-wrap:wrap;gap:11px;margin:25px 0 19px}
+.wf-platform-info .pi-hero-footnote{font-size:12px;color:#607087;font-weight:650}
+.wf-platform-info .pi-hero-visual{min-width:0;position:relative;isolation:isolate;padding:26px 17px 35px 12px}
+.wf-platform-info .pi-hero-accent{position:absolute;top:1%;left:10%;height:83%;width:43%;transform:skew(-15deg);background:linear-gradient(140deg,#FDC102,#ffe4a0);border-radius:17px;z-index:-1}
+.wf-platform-info .pi-browser{background:#fff;border:1px solid #d9e2ec;border-radius:13px;overflow:hidden;box-shadow:0 17px 40px #01122f26}
+.wf-platform-info .pi-browser-bar{height:31px;padding:0 12px;background:#01122F;display:flex;align-items:center;gap:5px}
+.wf-platform-info .pi-browser-bar span{width:7px;height:7px;background:#D4D3D4;border-radius:50%}
+.wf-platform-info .pi-browser-bar span:first-child{background:#FDC102}
+.wf-platform-info .pi-browser-bar b{font-size:9px;color:#fff;letter-spacing:.12em;margin-left:8px}
+.wf-platform-info .pi-browser img{display:block;width:100%;height:335px;object-fit:cover;object-position:top left}
+.wf-platform-info .pi-actual{position:absolute;bottom:2px;right:0;font-size:11px;font-weight:800;background:white;padding:9px 13px;border-radius:9px;border:1px solid #e3e8f0;box-shadow:0 6px 19px #01122f15}
+.wf-platform-info .pi-heading{max-width:850px;margin:0 auto 32px;text-align:center}
+.wf-platform-info .pi-heading h2{font-size:clamp(29px,3vw,43px);line-height:1.14;letter-spacing:-.043em;margin:0 0 11px}
+.wf-platform-info .pi-heading p{font-size:15px;line-height:1.65;color:#627087;margin:0}
+.wf-platform-info .pi-problems{padding:70px 0;background:#fff}
+.wf-platform-info .pi-problems-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.wf-platform-info .pi-problems-grid article{border:1px solid #e2e8f0;border-radius:14px;padding:27px 23px;background:#fff;min-height:230px;box-shadow:0 8px 18px #01122f09}
+.wf-platform-info .pi-problem-no{display:inline-grid;place-items:center;width:37px;height:37px;border-radius:10px;background:#fff2be;color:#735900;font-size:13px;font-weight:900;margin-bottom:22px}
+.wf-platform-info .pi-problems-grid h3{font-size:18px;line-height:1.25;letter-spacing:-.02em;margin:0 0 10px}
+.wf-platform-info .pi-problems-grid p{font-size:13px;line-height:1.62;color:#5b6980;margin:0}
+.wf-platform-info .pi-bridge{background:#f7f9fc;padding:76px 0}
+.wf-platform-info .pi-bridge-grid{display:grid;grid-template-columns:.9fr 1.1fr;align-items:center;gap:72px}
+.wf-platform-info .pi-bridge-copy h2{font-size:clamp(31px,3vw,45px);line-height:1.13;letter-spacing:-.045em;margin:0 0 15px}
+.wf-platform-info .pi-bridge-copy>p{font-size:15px;color:#54627a;line-height:1.72;margin:0 0 22px}
+.wf-platform-info .pi-ticks{display:grid;gap:12px;margin:0 0 27px;padding:0;list-style:none}
+.wf-platform-info .pi-ticks li{font-size:14px;font-weight:650;display:flex;gap:11px;align-items:flex-start}
+.wf-platform-info .pi-ticks li:before{content:"✓";display:grid;place-items:center;background:#FDC102;border-radius:50%;width:20px;height:20px;flex:none;font-size:12px;font-weight:900}
+.wf-platform-info .pi-screen-stack{position:relative;min-height:400px;padding:8px 65px 54px 0}
+.wf-platform-info .pi-screen-main,.wf-platform-info .pi-screen-secondary{border:6px solid #fff;background:#fff;border-radius:13px;overflow:hidden;box-shadow:0 18px 39px #01122f22}
+.wf-platform-info .pi-screen-main img{width:100%;height:325px;object-fit:cover;object-position:top left}
+.wf-platform-info .pi-screen-secondary{position:absolute;right:0;bottom:5px;width:40%}
+.wf-platform-info .pi-screen-secondary img{width:100%;height:175px;object-fit:cover;object-position:top left}
+.wf-platform-info .pi-journey{padding:75px 0;background:#fff}
+.wf-platform-info .pi-journey-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}
+.wf-platform-info .pi-journey-grid article{border:1px solid #e1e7ee;border-radius:14px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.wf-platform-info .pi-journey-icon{font-size:12px;font-weight:900;color:#936f00;padding:21px 19px 0}
+.wf-platform-info .pi-journey-grid h3{font-size:18px;margin:9px 19px 8px;letter-spacing:-.025em}
+.wf-platform-info .pi-journey-grid p{font-size:13px;line-height:1.6;color:#5b6a81;margin:0 19px 24px;flex:1}
+.wf-platform-info .pi-journey-grid img{display:block;width:100%;height:152px;object-fit:cover;object-position:top left;border-top:1px solid #e6ebf2}
+.wf-platform-info .pi-fit{padding:72px 0 79px;background:#f7f9fc}
+.wf-platform-info .pi-fit-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.wf-platform-info .pi-fit-card{display:flex;flex-direction:column;align-items:start;position:relative;border-radius:15px;border:1px solid #e1e7ef;background:#fff;padding:29px;transition:transform .2s,box-shadow .2s,border-color .2s;min-height:335px}
+.wf-platform-info .pi-fit-card:hover{transform:translateY(-5px);box-shadow:0 16px 30px #01122f16;border-color:#FDC102}
+.wf-platform-info .pi-fit-tag{font-size:10px;letter-spacing:.13em;font-weight:900;color:#8b6b00}
+.wf-platform-info .pi-fit-icon{display:grid;place-items:center;margin:18px 0 15px;width:43px;height:43px;border-radius:13px;background:#fff4c7;color:#01122F;font-weight:900}
+.wf-platform-info .pi-fit-card h3{font-size:23px;letter-spacing:-.035em;margin:0 0 12px}
+.wf-platform-info .pi-fit-card p{font-size:13px;line-height:1.65;color:#5b6980;margin:0 0 18px;flex:1}
+.wf-platform-info .pi-fit-price{font-weight:850;font-size:13px;margin-bottom:20px}
+.wf-platform-info .pi-fit-link{display:flex;align-items:center;justify-content:space-between;width:100%;background:#01122F;color:#fff;padding:13px 15px;border-radius:8px;border-bottom:3px solid #FDC102;font-size:12px;font-weight:850}
+.wf-platform-info .pi-fit-link span{font-size:17px;color:#FDC102}
+.wf-platform-info .pi-fit-note{font-size:12px;color:#62718a;line-height:1.65;text-align:center;margin:23px auto 0;max-width:800px}
+.wf-platform-info a:focus-visible{outline:3px solid #FDC102;outline-offset:3px}
+@media(max-width:1120px){.wf-platform-info .pi-hero-grid,.wf-platform-info .pi-bridge-grid{gap:28px}.wf-platform-info .pi-browser img{height:290px}.wf-platform-info .pi-problems-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:850px){.wf-platform-info .pi-hero{padding:22px 0 42px}.wf-platform-info .pi-hero-grid{display:flex;flex-direction:column;align-items:stretch;gap:16px}.wf-platform-info .pi-hero-visual{order:-1;width:100%;max-width:590px;margin:0 auto;padding:19px 15px 23px 7px}.wf-platform-info .pi-browser img{height:clamp(195px,43vw,295px)}.wf-platform-info .pi-hero-text h1{font-size:clamp(33px,6vw,47px)}.wf-platform-info .pi-bridge-grid{grid-template-columns:1fr}.wf-platform-info .pi-screen-stack{max-width:650px;width:100%;margin:auto}.wf-platform-info .pi-journey-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.wf-platform-info .pi-fit-grid{grid-template-columns:1fr;max-width:600px;margin:auto}.wf-platform-info .pi-fit-card{min-height:0}}
+@media(max-width:550px){.wf-platform-info .pi-problems,.wf-platform-info .pi-bridge,.wf-platform-info .pi-journey,.wf-platform-info .pi-fit{padding:46px 0}.wf-platform-info .pi-problems-grid,.wf-platform-info .pi-journey-grid{grid-template-columns:1fr}.wf-platform-info .pi-problems-grid article{min-height:0}.wf-platform-info .pi-hero-actions .btn{width:100%}.wf-platform-info .pi-browser img{height:195px}.wf-platform-info .pi-screen-main img{height:210px}.wf-platform-info .pi-screen-stack{min-height:280px;padding-right:39px}.wf-platform-info .pi-screen-secondary img{height:115px}}
+@media(prefers-reduced-motion:reduce){.wf-platform-info .pi-fit-card{transition:none!important}}
