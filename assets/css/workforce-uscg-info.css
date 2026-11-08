@@ -1,0 +1,62 @@
+/* USCG maritime workforce informational page */
+.us-info{--us-navy:#01122F;--us-gold:#FDC102}
+.us-info .us-hero{background:linear-gradient(112deg,#f7f9fc,#fff 64%,#fff9e8);padding:55px 0}
+.us-info .us-hero-grid,.us-info .us-rule-grid,.us-info .us-benefit-grid,.us-info .us-responsibility-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:52px;align-items:center}
+.us-info .us-hero-copy h1{font-size:clamp(37px,3.85vw,59px);line-height:1.1;letter-spacing:-.05em;margin:0 0 19px}
+.us-info .us-hero-copy>p{font-size:16px;line-height:1.7;color:#53637a;margin:0}
+.us-info .us-actions{display:flex;flex-wrap:wrap;gap:11px;margin:25px 0 16px}
+.us-info .us-hero-note{font-size:12px!important;font-weight:700;color:#6a7588!important}
+.us-info .us-hero-visual{position:relative;isolation:isolate;padding:24px 14px 34px 10px;min-width:0}
+.us-info .us-hero-accent{position:absolute;z-index:-1;left:7%;top:0;width:42%;height:85%;border-radius:18px;background:linear-gradient(140deg,#FDC102,#ffe5a8);transform:skew(-14deg)}
+.us-info .us-browser,.us-info .us-benefit-screen{background:#fff;border:1px solid #dfe6ee;border-radius:14px;overflow:hidden;box-shadow:0 18px 40px #01122f20}
+.us-info .us-browser-top{background:#01122F;color:white;padding:13px 16px;font-size:10px;font-weight:850;letter-spacing:.12em}
+.us-info .us-browser img{display:block;width:100%;height:310px;object-fit:cover;object-position:top left}
+.us-info .us-visual-tag{position:absolute;right:0;bottom:0;background:#fff;border:1px solid #e2e7ee;border-radius:8px;padding:9px 13px;font-size:11px;font-weight:800;box-shadow:0 7px 18px #01122f15}
+.us-info .us-rule,.us-info .us-responsibility{padding:40px 0;background:#01122F;color:#fff}
+.us-info .us-rule .wf-eyebrow,.us-info .us-responsibility .wf-eyebrow{color:#FDC102}
+.us-info .us-rule h2,.us-info .us-responsibility h2{font-size:clamp(27px,2.75vw,40px);line-height:1.16;letter-spacing:-.042em;color:white;margin:0}
+.us-info .us-rule p,.us-info .us-responsibility p{font-size:14px;line-height:1.75;color:#d3dfec;margin:0}
+.us-info .us-rule a{display:inline-block;margin-top:12px;font-size:13px;font-weight:800;color:#FDC102;text-decoration:underline}
+.us-info .us-heading{text-align:center;max-width:860px;margin:0 auto 33px}
+.us-info .us-heading h2{font-size:clamp(29px,3vw,43px);line-height:1.15;letter-spacing:-.045em;margin:0 0 12px}
+.us-info .us-heading p{font-size:15px;line-height:1.67;color:#637088;margin:0}
+.us-info .us-coverage,.us-info .us-software-benefits,.us-info .us-incidents,.us-info .us-flow,.us-info .us-products{padding:73px 0}
+.us-info .us-software-benefits,.us-info .us-flow,.us-info .us-products{background:#f8fafc}
+.us-info .us-coverage-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}
+.us-info .us-coverage-grid article{border:1px solid #e0e6ef;background:#fbfcfe;border-radius:14px;padding:25px}
+.us-info .us-coverage-grid article>span{display:grid;place-items:center;width:38px;height:38px;border-radius:10px;background:#fff1c0;color:#896900;font-weight:900;font-size:12px;margin-bottom:22px}
+.us-info .us-coverage-grid h3{font-size:18px;line-height:1.27;margin:0 0 10px}
+.us-info .us-coverage-grid p{font-size:13px;line-height:1.67;color:#5c6a80;margin:0}
+.us-info .us-benefit-copy h2{font-size:clamp(30px,3vw,44px);line-height:1.14;letter-spacing:-.045em;margin:0 0 16px}
+.us-info .us-benefit-copy>p{font-size:15px;line-height:1.72;color:#57667d;margin:0 0 22px}
+.us-info .us-benefit-copy ul{padding:0;margin:0 0 26px;display:grid;gap:12px;list-style:none}
+.us-info .us-benefit-copy li{display:flex;gap:10px;align-items:flex-start;font-size:14px;font-weight:650}
+.us-info .us-benefit-copy li:before{content:"✓";display:grid;place-items:center;border-radius:50%;width:20px;height:20px;background:#FDC102;font-size:12px;font-weight:900;flex:none}
+.us-info .us-benefit-screen img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top left}
+.us-info .us-incident-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:19px;max-width:920px;margin:0 auto}
+.us-info .us-incident-grid article{background:#fff;border:1px solid #e0e7ef;border-radius:15px;text-align:center;padding:32px}
+.us-info .us-incident-number{display:block;font-size:clamp(39px,4.2vw,55px);font-weight:900;letter-spacing:-.06em;line-height:1.15;color:#01122F;margin-bottom:15px}
+.us-info .us-incident-grid h3{font-size:19px;margin:0 0 12px}
+.us-info .us-incident-grid p{font-size:13px;line-height:1.7;color:#5c6980;margin:0}
+.us-info .us-incidents-source{font-size:12px;text-align:center;color:#657187;margin:22px auto 0;line-height:1.65}
+.us-info .us-incidents-source a{border-bottom:1px solid #FDC102}
+.us-info .us-flow-grid,.us-info .us-product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.us-info .us-flow-grid article{background:#fff;border:1px solid #e0e6ee;border-radius:14px;padding:28px;display:flex;flex-direction:column}
+.us-info .us-flow-grid article>span{font-size:10px;letter-spacing:.13em;font-weight:900;color:#8b6c00;margin-bottom:21px}
+.us-info .us-flow-grid h3{font-size:20px;margin:0 0 12px;letter-spacing:-.025em}
+.us-info .us-flow-grid p{font-size:13px;line-height:1.67;color:#59677d;flex:1;margin:0 0 20px}
+.us-info .us-flow-grid a{font-size:12px;font-weight:850;border-bottom:2px solid #FDC102;padding-bottom:4px;align-self:flex-start}
+.us-info .us-product{display:flex;flex-direction:column;align-items:flex-start;background:white;border:1px solid #e0e7ee;border-radius:15px;padding:28px;min-height:330px;transition:transform .18s,border-color .18s}
+.us-info .us-product:hover{transform:translateY(-4px);border-color:#FDC102}
+.us-info .us-product>span:first-child{font-size:10px;font-weight:900;letter-spacing:.13em;color:#916f00;margin-bottom:19px}
+.us-info .us-product h3{font-size:23px;line-height:1.2;margin:0 0 12px;letter-spacing:-.035em}
+.us-info .us-product p{font-size:13px;line-height:1.69;color:#5c6a81;flex:1;margin:0 0 20px}
+.us-info .us-product strong{font-size:13px;margin-bottom:19px}
+.us-info .us-product-cta{display:flex;width:100%;align-items:center;justify-content:space-between;gap:10px;padding:13px 14px;background:#01122F;color:white;border-bottom:3px solid #FDC102;border-radius:8px;font-weight:850;font-size:12px}
+.us-info .us-product-cta b{font-size:18px;color:#FDC102}
+.us-info .us-disclaimer{font-size:12px;line-height:1.65;color:#637188;text-align:center;max-width:850px;margin:23px auto 0}
+.us-info a:focus-visible{outline:3px solid #FDC102;outline-offset:3px}
+@media(max-width:1100px){.us-info .us-hero-grid,.us-info .us-benefit-grid{gap:27px}.us-info .us-coverage-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.us-info .us-browser img{height:275px}}
+@media(max-width:850px){.us-info .us-hero{padding:18px 0 43px}.us-info .us-hero-grid{display:flex;flex-direction:column;align-items:stretch;gap:15px}.us-info .us-hero-visual{order:-1;width:100%;max-width:610px;margin:auto}.us-info .us-browser img{height:clamp(200px,44vw,290px)}.us-info .us-hero h1{font-size:clamp(34px,6vw,48px)}.us-info .us-rule-grid,.us-info .us-benefit-grid,.us-info .us-responsibility-grid{grid-template-columns:1fr;gap:24px}.us-info .us-flow-grid,.us-info .us-product-grid{grid-template-columns:1fr;max-width:610px;margin:auto}.us-info .us-product{min-height:0}}
+@media(max-width:550px){.us-info .us-coverage,.us-info .us-software-benefits,.us-info .us-incidents,.us-info .us-flow,.us-info .us-products{padding:46px 0}.us-info .us-coverage-grid,.us-info .us-incident-grid{grid-template-columns:1fr}.us-info .us-actions .btn{width:100%}.us-info .us-hero-visual{padding:13px 10px 24px 6px}.us-info .us-browser img{height:190px}.us-info .us-rule,.us-info .us-responsibility{padding:30px 0}}
+@media(prefers-reduced-motion:reduce){.us-info .us-product{transition:none!important}}
