@@ -15,3 +15,9 @@
 .wf-service-checkout #service-payment-element:empty{display:none}
 .wf-service-checkout .ck-status.error{color:#b42318}
 @media(max-width:620px){.wf-service-form{grid-template-columns:1fr}.wf-service-field:nth-child(5){grid-column:auto}}
+
+/* Keep totals visible against the navy order-summary footer. */
+.wf-service-checkout .ck-total{background:#01122F;color:#fff}
+.wf-service-checkout .ck-total span,.wf-service-checkout .ck-total strong{color:#fff!important}
+.wf-service-checkout .ck-payment #service-payment-element{min-height:80px}
+.wf-service-checkout .ck-status{font-size:12px;color:#53677f}
