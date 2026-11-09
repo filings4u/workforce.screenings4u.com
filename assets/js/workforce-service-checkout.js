@@ -24,7 +24,7 @@ function formField(name,label,type='text',required=false){
 function render(serviceData){
  const main=document.getElementById('main');main.className='wf-page wf-checkout wf-service-checkout';
  const services=serviceData||{};
- main.innerHTML='<section class="ck-hero"><div class="wf-container ck-top"><div><span class="wf-eyebrow">SECURE WORKFORCE SERVICE CHECKOUT</span><h1>Secure Workforce Checkout</h1><p>Review your selected service or product, enter your details, and complete a secure one-time payment.</p></div><a class="ck-back" href="new-entrant-audit.html#packages" id="service-back">← Back to service</a></div></section><section class="ck-section"><div class="wf-container ck-grid"><div class="ck-left"><section class="ck-panel ck-payment"><div class="ck-step"><span>01</span><div><h2>Contact information</h2><p>We will use these details for your payment confirmation and service follow-up.</p></div></div><form id="wf-service-form" class="wf-service-form" novalidate></form><div class="ck-rule"></div><div class="ck-step"><span>02</span><div><h2>Secure one-time payment</h2><p>No recurring subscription is created by this purchase.</p></div></div><div id="service-payment-element" class="ck-stripe"></div><div id="stripe-errors" class="ck-alert ck-alert-error" role="alert" hidden></div><div id="checkout-status" class="ck-status" role="status">Enter your information to load secure payment.</div><button id="service-pay" type="button" class="ck-pay" disabled>Continue to secure payment →</button><p class="ck-fine">Payment information is processed by Stripe.</p></section></div><aside class="ck-panel ck-summary"><span class="wf-eyebrow">ONE-TIME SERVICE</span><h2 id="service-title"></h2><p id="service-description"></p><div class="ck-summary-section"><strong class="ck-section-label">INCLUDED IN THIS PACKAGE</strong><ul id="service-features" class="ck-features"></ul></div><div class="ck-total"><span>Pay once</span><strong id="service-price"></strong></div><p class="ck-summary-note">Workforce provides preparation services; FMCSA conducts the official audit. Purchase does not guarantee an audit outcome.</p><p class="ck-summary-help"><a href="contact.html">Contact Sales</a> · <a href="support.html">Support</a></p></aside></div></section>';
+ main.innerHTML='<section class="ck-hero"><div class="wf-container ck-top"><div><span class="wf-eyebrow">SECURE WORKFORCE SERVICE CHECKOUT</span><h1>Secure Workforce Checkout</h1><p>Review your selected service or product, enter your details, and complete a secure one-time payment.</p></div><a class="ck-back" href="new-entrant-audit.html#packages" id="service-back">← Back to service</a></div></section><section class="ck-section"><div class="wf-container ck-grid"><div class="ck-left"><section class="ck-panel ck-payment"><div class="ck-step"><span>01</span><div><h2>Contact information</h2><p>We will use these details for your payment confirmation and service follow-up.</p></div></div><form id="wf-service-form" class="wf-service-form" novalidate></form><div class="ck-rule"></div><div class="ck-step"><span>02</span><div><h2>Secure one-time payment</h2><p>No recurring subscription is created by this purchase.</p></div></div><div id="service-payment-element" class="ck-stripe"></div><div id="stripe-errors" class="ck-alert ck-alert-error" role="alert" hidden></div><div id="checkout-status" class="ck-status" role="status">Secure payment loads automatically.</div><button id="service-pay" type="button" class="ck-pay" disabled>Pay securely →</button><p class="ck-fine">Payment information is processed by Stripe.</p></section></div><aside class="ck-panel ck-summary"><span class="wf-eyebrow">ONE-TIME SERVICE</span><h2 id="service-title"></h2><p id="service-description"></p><div class="ck-summary-section"><strong class="ck-section-label">INCLUDED IN THIS PACKAGE</strong><ul id="service-features" class="ck-features"></ul></div><div class="ck-total"><span>Pay once</span><strong id="service-price"></strong></div><p class="ck-summary-note">Workforce provides preparation services; FMCSA conducts the official audit. Purchase does not guarantee an audit outcome.</p><p class="ck-summary-help"><a href="contact.html">Contact Sales</a> · <a href="support.html">Support</a></p></aside></div></section>';
  const form=$('wf-service-form');
  const back=$('service-back');if(back&&services.code&&!services.code.startsWith('fmcsa_new_entrant'))back.href='services.html';
  for(const [name,label,type,required] of [['first_name','First name','text',true],['last_name','Last name','text',true],['email','Email address','email',true],['phone','Phone number','tel',false],['company_name','Motor carrier / company name','text',false]])form.append(formField(name,label,type,required));
@@ -33,33 +33,39 @@ function render(serviceData){
  $('service-price').textContent='$'+Number(services.price||prices[service]).toFixed(2);
  const list=$('service-features');for(const feature of (services.features||[])){const li=document.createElement('li');li.textContent=String(feature);list.append(li)}
  if(!list.children.length){const li=document.createElement('li');li.textContent='Professional preparation and guidance';list.append(li)}
- $('service-pay').disabled=false;
+ $('service-pay').textContent='Pay $'+Number(services.price).toFixed(2)+' securely →';
  $('service-pay').addEventListener('click',start);
  form.addEventListener('submit',e=>{e.preventDefault();start()});
+}
+async function mountPayment(key,price){
+ if(typeof Stripe!=='function'||!key)throw Error('Stripe payment form is unavailable.');
+ stripe=Stripe(key);
+ const cents=Math.round(Number(price)*100);
+ if(!Number.isInteger(cents)||cents<50)throw Error('Invalid checkout price.');
+ elements=stripe.elements({mode:'payment',amount:cents,currency:'usd',appearance:{theme:'stripe',variables:{colorPrimary:'#01122F',colorText:'#01122F',colorBackground:'#fff',borderRadius:'10px',fontFamily:'Inter,Arial,sans-serif'}}});
+ elements.create('payment',{layout:'accordion'}).mount('#service-payment-element');
+ $('service-pay').disabled=false;
+ setMessage('Secure payment powered by Stripe.');
 }
 async function start(){
  if(submitting)return;
  const form=$('wf-service-form'),data=new FormData(form);
  if(!form.reportValidity())return;
- const details=Object.fromEntries(['first_name','last_name','email','phone','company_name'].map(k=>[k,String(data.get(k)||'').trim()]));
+ if(!stripe||!elements){setMessage('The secure payment form has not loaded. Refresh the page.',true);return}
  submitting=true;$('service-pay').disabled=true;
  try{
-  if(!elements){
-   setMessage('Preparing your secure payment form…');
-   const d=await request('prepare',{item_code:service,quantity:1,...details});
-   if(!d.client_secret||!d.publishable_key||typeof Stripe!=='function')throw Error('Stripe could not be initialized.');
-   orderId=d.order_id;stripe=Stripe(d.publishable_key);
-   elements=stripe.elements({clientSecret:d.client_secret,appearance:{theme:'stripe',variables:{colorPrimary:'#01122F',colorText:'#01122F',colorBackground:'#fff',colorDanger:'#b42318',borderRadius:'10px',fontFamily:'Inter,Arial,sans-serif'}}});
-   elements.create('payment',{layout:'accordion'}).mount('#service-payment-element');
-   $('service-pay').textContent='Pay $'+Number(d.amount).toFixed(2)+' securely →';
-   $('service-pay').disabled=false;setMessage('Ready for secure payment.');return;
-  }
-  setMessage('Confirming your payment securely…');
-  const result=await stripe.confirmPayment({elements,confirmParams:{return_url:location.origin+'/checkout.html?service='+encodeURIComponent(service)+'&order_id='+encodeURIComponent(orderId)},redirect:'if_required'});
+  setMessage('Confirming payment details…');
+  const checked=await elements.submit();
+  if(checked.error)throw Error(checked.error.message||'Check your payment details.');
+  const details=Object.fromEntries(['first_name','last_name','email','phone','company_name'].map(k=>[k,String(data.get(k)||'').trim()]));
+  const d=await request('prepare',{item_code:service,quantity:1,...details});
+  if(!d.client_secret||!d.order_id)throw Error('Unable to initialize payment.');
+  orderId=d.order_id;
+  const result=await stripe.confirmPayment({elements,clientSecret:d.client_secret,confirmParams:{return_url:location.origin+'/checkout.html?service='+encodeURIComponent(service)+'&order_id='+encodeURIComponent(orderId)},redirect:'if_required'});
   if(result.error)throw Error(result.error.message||'Payment was not completed.');
   await confirm(orderId);
  }catch(e){setMessage(e.message||'Payment could not be processed.',true)}
- finally{submitting=false;if($('service-pay'))$('service-pay').disabled=false}
+ finally{submitting=false;const pay=$('service-pay');if(pay)pay.disabled=false}
 }
 async function confirm(id){
  setMessage('Verifying payment with Stripe…');
@@ -78,7 +84,7 @@ async function confirm(id){
  const order=params.get('order_id');
  if(order&&/^[0-9a-f-]{36}$/i.test(order)){
   $('service-pay').disabled=true;await confirm(order);
- }
+ }else{await mountPayment(data.publishable_key,selected.price)}
  }catch(e){if($('main')){$('main').innerHTML='<section class="ck-section"><div class="wf-container"><div class="ck-alert ck-alert-error">'+String(e.message||'Unable to load this service')+'</div><p><a href="services.html">Return to services</a></p></div></section>'}}
 })();
 })();
