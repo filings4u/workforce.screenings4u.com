@@ -1,6 +1,6 @@
 /* Workforce published blog — management-backed DOT blog API */
 (()=>{'use strict';
-const API='https://elpbnytpciqnbexiaebp.supabase.co/functions/v1/dot-blog-public';
+const API='https://elpbnytpciqnbexiaebp.supabase.co/functions/v1/workforce-blog-public';
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const category=s=>{s=String(s||'').toLowerCase();if(s.includes('random')||s.includes('pool'))return'random';if(s.includes('test'))return'testing';if(s.includes('report')||s.includes('record')||s.includes('document'))return'records';if(s.includes('agenc')||/fmcsa|faa|fra|fta|phmsa|uscg/.test(s))return'agencies';return'programs'};
