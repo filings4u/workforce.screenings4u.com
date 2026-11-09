@@ -56,3 +56,24 @@
 @media(max-width:980px){.wfne-hero-grid{gap:30px}.wfne-plans{gap:12px}.wfne-plan{padding:20px}.wfne-plan.is-featured{padding:19px}.wfne-plan h3{font-size:21px}.wfne-price strong{font-size:31px}}
 @media(max-width:850px){.wf-new-entrant .wf-container{width:min(100% - 38px,700px)}.wfne-hero-grid{display:flex;flex-direction:column;align-items:stretch;gap:22px;padding-block:22px 45px}.wfne-hero-photo{order:-1;aspect-ratio:16/9}.wfne-hero h1{font-size:clamp(33px,6vw,46px)}.wfne-overview{grid-template-columns:1fr}.wfne-plans{grid-template-columns:1fr;gap:28px}.wfne-plan{min-height:0;padding:26px}.wfne-plan.is-featured{padding:25px}.wfne-plan-top p{min-height:0}.wfne-requirements-grid{grid-template-columns:repeat(2,1fr)}.wfne-existing-inner{flex-direction:column;align-items:flex-start}.wfne-existing .wfne-button{flex:none}}
 @media(max-width:520px){.wfne-requirements-grid{grid-template-columns:1fr}.wfne-intro,.wfne-pricing,.wfne-requirements{padding:52px 0}.wfne-hero-actions .wfne-button{width:100%}.wfne-trust{flex-direction:column;gap:9px}.wfne-plan{padding:20px}.wfne-section-title{text-align:left}.wfne-source{align-items:flex-start;flex-direction:column}}
+
+/* Align New Entrant hero with Workforce homepage and Owner-Operator Concept C */
+.wf-new-entrant .wfne-hero{background:#f7f9fc;color:#01122F;overflow:hidden}
+.wf-new-entrant .wfne-hero-grid{display:grid;grid-template-columns:minmax(0,49%) minmax(0,51%);gap:0;align-items:stretch;min-height:510px;padding-top:0;padding-bottom:0}
+.wf-new-entrant .wfne-hero-copy{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:49px 29px 49px 0;position:relative;z-index:2;background:linear-gradient(90deg,#f8fafc 75%,#f8fafce8 100%)}
+.wf-new-entrant .wfne-hero .wf-eyebrow{color:#896900;font-size:11px;letter-spacing:.16em;margin:0 0 5px}
+.wf-new-entrant .wfne-hero h1{color:#01122F;font-size:clamp(35px,3.65vw,56px);line-height:1.11;letter-spacing:-.05em;margin:10px 0 18px;max-width:580px}
+.wf-new-entrant .wfne-hero .wf-lead{color:#52617b;font-size:15px;line-height:1.65;max-width:540px;margin:0 0 23px}
+.wf-new-entrant .wfne-hero-actions{gap:11px;margin:0 0 24px}
+.wf-new-entrant .wfne-hero-actions .btn{font-size:13px;min-height:46px;padding:12px 19px;display:inline-flex;align-items:center;justify-content:center;text-decoration:none}
+.wf-new-entrant .wfne-hero-actions .btn-outline{color:#01122F;border:1px solid #b7c3d1;background:transparent}
+.wf-new-entrant .wfne-hero-actions .btn-outline:hover{border-color:#FDC102;background:#fff9e5}
+.wf-new-entrant .wfne-trust{display:flex;gap:16px;flex-wrap:wrap;color:#42556d;font-size:10.5px;font-weight:750}
+.wf-new-entrant .wfne-hero-art{height:auto;min-height:510px;position:relative;isolation:isolate;overflow:hidden;background:#dbe5ee}
+.wf-new-entrant .wfne-hero-photo-frame{position:absolute;inset:0;overflow:hidden}
+.wf-new-entrant .wfne-hero-photo{width:100%;height:100%;display:block;object-fit:cover;object-position:60% center;border:0;border-radius:0}
+.wf-new-entrant .wfne-hero-photo-frame:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,#f8fafc 0%,#f8fafc94 10%,transparent 43%);pointer-events:none}
+.wf-new-entrant .wfne-hero-gold{position:absolute;top:-7%;bottom:-7%;left:13%;width:15px;transform:rotate(15deg);background:#FDC102;z-index:3;pointer-events:none}
+@media(max-width:900px){.wf-new-entrant .wfne-hero-grid{min-height:430px}.wf-new-entrant .wfne-hero-art{min-height:430px}.wf-new-entrant .wfne-hero h1{font-size:clamp(30px,3.7vw,43px)}.wf-new-entrant .wfne-hero-copy{padding-right:19px}}
+@media(max-width:850px){.wf-new-entrant .wfne-hero-grid{display:flex;flex-direction:column;gap:0;min-height:0;padding:0}.wf-new-entrant .wfne-hero-art{order:-1;min-height:0;height:290px;margin:0 -19px}.wf-new-entrant .wfne-hero-photo-frame{position:absolute;inset:0}.wf-new-entrant .wfne-hero-photo-frame:before{background:linear-gradient(0deg,#f8fafc22,transparent 52%)}.wf-new-entrant .wfne-hero-gold{left:auto;right:13%;width:11px}.wf-new-entrant .wfne-hero-copy{padding:32px 0 42px;background:transparent}.wf-new-entrant .wfne-hero h1{font-size:clamp(33px,5.8vw,48px);max-width:660px}.wf-new-entrant .wfne-hero .wf-lead{max-width:650px}}
+@media(max-width:480px){.wf-new-entrant .wfne-hero-art{height:235px}.wf-new-entrant .wfne-hero-actions{width:100%;flex-direction:column}.wf-new-entrant .wfne-hero-actions .btn{width:100%}.wf-new-entrant .wfne-trust{gap:10px}.wf-new-entrant .wfne-trust span{flex:1 1 100%}}
