@@ -32,6 +32,7 @@ function render(serviceData){
  $('service-price').textContent='$'+Number(services.price||prices[service]).toFixed(2);
  const list=$('service-features');for(const feature of (services.features||[])){const li=document.createElement('li');li.textContent=String(feature);list.append(li)}
  if(!list.children.length){const li=document.createElement('li');li.textContent='Professional preparation and guidance';list.append(li)}
+ $('service-pay').disabled=false;
  $('service-pay').addEventListener('click',start);
  form.addEventListener('submit',e=>{e.preventDefault();start()});
 }
