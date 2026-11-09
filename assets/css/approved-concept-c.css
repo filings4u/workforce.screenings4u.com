@@ -275,3 +275,10 @@ body{color:#01122F}
 .product-actions .btn{font-size:12px}
 @media(max-width:850px){.real-portal-visual{width:100%;height:auto;min-height:0;padding:10px 12px 30px 0}.portal-laptop{width:88%}.portal-visual-caption{bottom:4px}.product-actions{margin-top:19px}}
 @media(max-width:440px){.portal-laptop-display{border-width:7px}.portal-visual-caption{font-size:9px;padding:6px 9px}.product-actions .btn{width:100%}}
+
+/* Workforce global footer legal navigation */
+.footer-bottom{display:flex;align-items:center;flex-wrap:wrap;gap:14px}
+.footer-bottom .footer-legal{display:flex;align-items:center;flex-wrap:wrap;gap:14px;margin-left:auto}
+.footer-bottom .footer-legal a{font-size:11px;font-weight:700;color:#d7e3f1;text-decoration:none;white-space:nowrap}
+.footer-bottom .footer-legal a:hover,.footer-bottom .footer-legal a:focus-visible{color:#FDC102;text-decoration:underline}
+@media(max-width:850px){.footer-bottom .footer-legal{width:100%;justify-content:flex-start;margin:8px 0 0}}
