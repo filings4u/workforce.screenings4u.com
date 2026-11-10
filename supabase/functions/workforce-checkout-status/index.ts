@@ -57,7 +57,10 @@ Deno.serve(async(req)=>{
       timeline:c(b.timeline,120)||null,message:c(b.message,10000)||null,page_url:c(b.page_url,2000)||null,
       source:source==="workforce.screenings4u.com"?source:"workforce.screenings4u.com",status:"new",
       metadata:{submitted_at:now,channel:b.topic==="support"?"support":"website"},created_at:now,updated_at:now};
-    const q=await db.from("workforce_marketing_inquiries").insert(row).select("id").single();if(q.error)throw q.error;
+    const isDotSource=source==="dot.screenings4u.com";
+    const targetTable=isDotSource?"dot_marketing_inquiries":"workforce_marketing_inquiries";
+    const targetRow=isDotSource?{...row,dot_agency:c(b.dot_agency,80)||null,existing_customer:typeof b.existing_customer==="boolean"?b.existing_customer:null,source:"dot.screenings4u.com"}:row;
+    const q=await db.from(targetTable).insert(targetRow).select("id").single();if(q.error)throw q.error;
     const key=Deno.env.get("RESEND_API_KEY")||"",from=Deno.env.get("SCREENINGS4U_FROM_EMAIL")||"Workforce <notifications@screenings4u.com>";
     const esc=(v:string)=>v.replace(/[&<>"']/g,k=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[k]||k));
     const html=(heading:string,body:string,button:string,url:string)=>'<div style="padding:26px;background:#f3f7fc;font-family:Arial,sans-serif;color:#01122f"><div style="background:#fff;max-width:620px;margin:auto;border-radius:12px;overflow:hidden;border:1px solid #dce6f0"><div style="background:#01122f;padding:22px"><img src="https://workforce.screenings4u.com/images/logo.png" alt="Workforce by screenings4u" width="215"></div><div style="padding:27px"><h1 style="font-size:22px">'+esc(heading)+'</h1><p style="line-height:1.65;white-space:pre-wrap">'+esc(body)+'</p><a href="'+url+'" style="display:inline-block;background:#fdc102;color:#01122f;padding:12px 16px;border-radius:8px;text-decoration:none;font-weight:bold">'+esc(button)+'</a></div></div></div>';
@@ -73,7 +76,7 @@ Deno.serve(async(req)=>{
     const admin=await send(adminEmail,"New Workforce "+kind+" inquiry — "+first+" "+last,
       "Customer: "+first+" "+last+"\nEmail: "+email+"\nCompany: "+(row.company||"Not supplied")+"\nTopic: "+(row.topic||"General")+"\nMessage:\n"+(row.message||"Not supplied"),
       "New Workforce inquiry","Open Management","https://app.screenings4u.com/");
-    const up=await db.from("workforce_marketing_inquiries").update({metadata:{...row.metadata,notification_status:{customer,admin}}}).eq("id",q.data.id);
+    const up=await db.from(targetTable).update({metadata:{...row.metadata,notification_status:{customer,admin}}}).eq("id",q.data.id);
     if(up.error)console.error("Workforce inquiry notification audit",up.error);
     return J({ok:true,id:q.data.id,notification_status:{customer,admin}});
   }
