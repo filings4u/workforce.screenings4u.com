@@ -1,0 +1,41 @@
+/* Workforce House Lab Account storefront - max width 1450px and responsive cards. */
+.wf-house-lab{color:#01122f}
+.wf-house-lab .wf-container{width:calc(100% - 40px);max-width:1450px;margin:auto}
+.lab-hero{background:linear-gradient(130deg,#f4f7fc,#fff);padding:70px 0 55px}
+.lab-hero h1{font-size:clamp(30px,4vw,52px);line-height:1.15;letter-spacing:-.04em;margin:12px 0 14px}
+.lab-hero p{font-size:16px;line-height:1.75;color:#53657f;max-width:850px}
+.lab-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+.lab-packages{padding:65px 0}
+.lab-status{font-size:13px;font-weight:650;color:#4d6689;margin:0 0 20px}
+.lab-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:stretch}
+.lab-card{background:#fff;border:1px solid #dbe3ee;border-radius:15px;padding:26px;display:flex;flex-direction:column;min-width:0}
+.lab-card:nth-child(2){border:2px solid #FDC102;padding:25px;box-shadow:0 15px 35px #01122f12}
+.lab-eyebrow{font-size:11px;font-weight:800;color:#77600a;letter-spacing:.1em;text-transform:uppercase}
+.lab-card h3{font-size:22px;line-height:1.25;margin:10px 0}
+.lab-card>p{font-size:13px;line-height:1.6;color:#53657f}
+.lab-money{font-weight:900;font-size:clamp(28px,2.7vw,40px);letter-spacing:-.04em;margin:18px 0}
+.lab-money span{font-size:12px;font-weight:600;color:#65768a;letter-spacing:0}
+.lab-sub-note{font-size:12px;color:#526a87;background:#f3f6fb;border-radius:9px;padding:12px;line-height:1.5}
+.lab-card h4{font-size:13px;margin:20px 0 10px}
+.lab-card ul{list-style:none;padding:0;margin:0 0 20px;display:grid;gap:9px;flex:1}
+.lab-card li{display:flex;gap:9px;align-items:flex-start;font-size:12.5px;color:#33435d;line-height:1.55}
+.lab-card li:before{content:"✓";background:#FDC102;color:#01122f;border-radius:50%;width:17px;height:17px;flex:none;display:grid;place-items:center;font-size:10px;font-weight:900}
+.lab-card .btn{display:block;text-align:center;margin-top:auto}
+.lab-benefits{background:#f7f9fc;padding:65px 0}
+.lab-matrix-scroll{background:white;border:1px solid #dce5f0;border-radius:14px;overflow:auto}
+.lab-matrix{width:100%;border-collapse:collapse;min-width:700px}
+.lab-matrix thead{background:#01122f;color:white}
+.lab-matrix th,.lab-matrix td{padding:15px 17px;border-bottom:1px solid #e6ecf3;text-align:center;font-size:13px}
+.lab-matrix th:first-child{text-align:left;width:43%}
+.lab-matrix tbody th{font-weight:750}
+.lab-matrix tbody td.yes{font-weight:800;color:#116949}
+.lab-matrix tbody td.planned{font-size:11px;color:#65768d}
+.lab-disclaimer{font-size:12px;color:#526985;line-height:1.7;margin:18px 0 0}
+.lab-process{padding:65px 0}
+.lab-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.lab-steps article{border:1px solid #dbe4ef;border-radius:13px;padding:24px;background:white}
+.lab-steps span{font-size:15px;font-weight:900;color:#967100}
+.lab-steps h3{font-size:17px;margin:8px 0}
+.lab-steps p{font-size:13px;line-height:1.65;color:#5a6d86}
+@media(max-width:900px){.lab-grid{grid-template-columns:1fr;max-width:620px;margin:auto}.lab-steps{grid-template-columns:1fr}}
+@media(max-width:620px){.wf-house-lab .wf-container{width:calc(100% - 28px)}.lab-hero{padding:45px 0}.lab-packages,.lab-benefits,.lab-process{padding:45px 0}.lab-card{padding:20px}.lab-card:nth-child(2){padding:19px}}
