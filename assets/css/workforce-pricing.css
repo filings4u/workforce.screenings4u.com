@@ -13,6 +13,6 @@
 .wf-price-card .wf-feature-text{display:flex;flex-direction:column;gap:2px;min-width:0}
 .wf-price-card .wf-plan-setup-note{display:block;font-size:10px;font-weight:500;color:#65758e;line-height:1.45}
 .wf-price-card>.btn{margin-top:auto}
-.wf-price-card .wf-plan-full-list li[data-feature="client_payments"] .wf-feature-text::after{content:"Requires optional payment processor setup and approval";display:block;color:#66748a;font-weight:500;font-size:10px}
+
 @media(max-width:900px){.wf-price-card .wf-plan-full-list li{font-size:12px}}
 @media(max-width:720px){.wf-price-card .wf-plan-full-list li{font-size:13px}}
