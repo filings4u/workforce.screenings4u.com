@@ -1,0 +1,28 @@
+.wf-lab-intake{background:#f3f6fa;color:#01122F;min-height:75vh}
+.wf-lab-intake .wf-container{max-width:1150px;width:calc(100% - 36px);margin:auto}
+.lab-intake-heading{padding:55px 0 22px}
+.lab-intake-heading h1{font-size:clamp(28px,3.6vw,40px);line-height:1.2;margin:10px 0}
+.lab-intake-heading p{max-width:860px;font-size:14px;line-height:1.7;color:#536580}
+.lab-intake-message{border:1px solid #dae6f2;border-radius:9px;background:white;padding:15px;font-size:13px;font-weight:700;margin:18px 0 8px;color:#1d5b47}
+.lab-intake-message.error{color:#9d2626;border-color:#efc8c8}
+.lab-intake-warning{background:#fff8e2;color:#755a1f!important;border-radius:9px;padding:13px}
+.lab-intake-content{padding-bottom:65px}
+.lab-intake-card{background:white;border:1px solid #d9e3ee;border-radius:14px;padding:25px;display:grid;gap:20px}
+.lab-intake-card .section{border-top:1px solid #e5edf5;padding-top:20px}
+.lab-intake-card .section:first-child{border-top:0;padding-top:0}
+.lab-intake-card .section h2{font-size:18px;margin:0 0 5px}
+.lab-intake-card .section .sub{color:#667990;font-size:12px;margin:0 0 15px}
+.lab-intake-card .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.lab-intake-card .field{display:grid;gap:7px;min-width:0}
+.lab-intake-card .full{grid-column:1/-1}
+.lab-intake-card label{font-size:12px;font-weight:700}
+.lab-intake-card input,.lab-intake-card select,.lab-intake-card textarea{padding:11px 12px;border:1px solid #c8d5e5;border-radius:8px;width:100%;font:inherit;background:white;color:#01122F}
+.lab-intake-card input:focus{outline:2px solid #FDC102;outline-offset:1px}
+.lab-intake-card .same-row{display:flex;gap:8px;align-items:center;font-size:12px}
+.lab-intake-card input[type=checkbox]{width:16px;flex:none}
+.lab-intake-card .address-warning{font-size:11px;color:#a84429}
+.lab-intake-card .actions{display:flex;align-items:center;gap:15px;flex-wrap:wrap}
+.lab-intake-card .primary{background:#01122F;color:white;padding:13px 22px;border:0;border-radius:8px;cursor:pointer;font-weight:800}
+.lab-intake-card .primary:disabled{opacity:.5;cursor:not-allowed}
+.lab-intake-card .msg{font-size:13px}
+@media(max-width:700px){.lab-intake-card{padding:18px}.lab-intake-card .grid{grid-template-columns:1fr}.lab-intake-card .full{grid-column:auto}.lab-intake-heading{padding:35px 0 15px}}
