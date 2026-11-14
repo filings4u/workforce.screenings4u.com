@@ -48,7 +48,6 @@
 .lab-hero-copy p{font-size:17px;line-height:1.7;max-width:650px;margin:0}
 .lab-hero-photo{min-height:535px;background:#e7edf2 url("../../images/Confident%20Logistics%20Team%20Portrait.png") center 44%/cover no-repeat;position:relative}
 .lab-hero-photo:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#f7f9fc 0%,#f7f9fc9c 10%,transparent 36%)}
-.lab-card .lab-inherits{background:#f3f6fb;color:#324b6b;border-left:3px solid #FDC102;border-radius:5px;padding:10px 12px;margin:0 0 14px;font-size:12px;font-weight:650}
 .lab-faq{background:#f7f9fc;padding:75px 0}
 .lab-faq-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 .lab-faq-grid details{border:1px solid #dbe4ee;border-radius:13px;background:#fff;padding:0 22px}
