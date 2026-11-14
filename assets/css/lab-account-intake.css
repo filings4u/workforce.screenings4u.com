@@ -1,5 +1,5 @@
 .wf-lab-intake{background:#f3f6fa;color:#01122F;min-height:75vh}
-.wf-lab-intake .wf-container{max-width:1150px;width:calc(100% - 36px);margin:auto}
+.wf-lab-intake .wf-container{max-width:1450px;width:calc(100% - 40px);margin:auto}
 .lab-intake-heading{padding:55px 0 22px}
 .lab-intake-heading h1{font-size:clamp(28px,3.6vw,40px);line-height:1.2;margin:10px 0}
 .lab-intake-heading p{max-width:860px;font-size:14px;line-height:1.7;color:#536580}
@@ -26,3 +26,13 @@
 .lab-intake-card .primary:disabled{opacity:.5;cursor:not-allowed}
 .lab-intake-card .msg{font-size:13px}
 @media(max-width:700px){.lab-intake-card{padding:18px}.lab-intake-card .grid{grid-template-columns:1fr}.lab-intake-card .full{grid-column:auto}.lab-intake-heading{padding:35px 0 15px}}
+
+/* Keep the full intake aligned to the 1450px Workforce site grid. */
+.wf-lab-intake .lab-intake-heading{padding:48px 0 16px}
+.wf-lab-intake .lab-intake-heading .wf-container{max-width:1450px}
+.wf-lab-intake .lab-intake-content{padding-top:0;padding-bottom:65px}
+.wf-lab-intake .lab-intake-card{width:100%;max-width:none;box-sizing:border-box}
+.wf-lab-intake .lab-intake-card .grid{column-gap:20px;row-gap:16px}
+.wf-lab-intake .lab-intake-card input,.wf-lab-intake .lab-intake-card select,.wf-lab-intake .lab-intake-card textarea{box-sizing:border-box;min-width:0}
+.wf-lab-intake .lab-intake-heading p{max-width:1040px}
+@media(max-width:700px){.wf-lab-intake .wf-container{width:calc(100% - 28px)}.wf-lab-intake .lab-intake-heading{padding:32px 0 14px}.wf-lab-intake .lab-intake-card .grid{grid-template-columns:1fr}}
