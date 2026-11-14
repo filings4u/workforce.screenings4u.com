@@ -46,7 +46,7 @@
 .lab-hero-copy{padding:68px 42px 62px 0;display:flex;flex-direction:column;justify-content:center}
 .lab-hero-copy h1{font-size:clamp(37px,3.65vw,58px);line-height:1.12;letter-spacing:-.045em;margin:15px 0 18px}
 .lab-hero-copy p{font-size:17px;line-height:1.7;max-width:650px;margin:0}
-.lab-hero-photo{min-height:535px;background:#e7edf2 url("../../images/Confident%20Logistics%20Team%20Portrait.png") center 44%/cover no-repeat;position:relative}
+.lab-hero-photo{min-height:535px;background:#e7edf2 url("../../images/Focused%20Laboratory%20Technician%20Pipetting%20Samples.png") center 44%/cover no-repeat;position:relative}
 .lab-hero-photo:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#f7f9fc 0%,#f7f9fc9c 10%,transparent 36%)}
 .lab-faq{background:#f7f9fc;padding:75px 0}
 .lab-faq-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
