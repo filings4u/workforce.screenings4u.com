@@ -8,7 +8,6 @@ function card(item,index){
  const article=document.createElement('article');article.className='lab-card';
  text(article,index===1?'POPULAR PACKAGE':'HOUSE LAB ACCOUNT','span','lab-eyebrow');
  text(article,item.name,'h3');
- text(article,item.description||'Laboratory account and setup services.','p');
  const amount=text(article,price(item.price),'div','lab-money');
  text(amount,' one-time setup','span');
  text(article,'Package inclusions','h4');
