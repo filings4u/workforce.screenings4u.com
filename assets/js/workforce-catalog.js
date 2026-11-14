@@ -25,7 +25,23 @@ Promise.allSettled(types.map(async type=>{
  if(!Array.isArray(payload.plans))throw Error('Invalid public catalog response');
  return payload.plans;
 })).then(results=>{
- const byCode=new Map(results.filter(r=>r.status==='fulfilled').flatMap(r=>r.value).map(p=>[p.code,p]));
+ const allPlans=results.filter(r=>r.status==='fulfilled').flatMap(r=>r.value);
+ const byCode=new Map(allPlans.map(p=>[p.code,p]));
+ // Keep shared benefits in identical order across each audience's tiers,
+ // appending newly introduced benefits only after the lower-tier list.
+ const featureOrders=new Map();
+ const enabledFor=p=>Object.keys(p.feature_entitlements||{}).filter(k=>p.feature_entitlements[k]===true);
+ const audienceTypes=new Set(allPlans.map(p=>p.audience).filter(Boolean));
+ for(const audience of audienceTypes){
+   const audiencePlans=allPlans.filter(p=>p.audience===audience&&p.active!==false&&p.feature_entitlements&&typeof p.feature_entitlements==='object')
+     .sort((a,b)=>enabledFor(a).length-enabledFor(b).length||String(a.code).localeCompare(String(b.code)));
+   const order=[];
+   for(const plan of audiencePlans){
+     const keys=enabledFor(plan).sort((a,b)=>(FEATURE_METADATA[a]?.[2]??999)-(FEATURE_METADATA[b]?.[2]??999)||a.localeCompare(b));
+     for(const key of keys)if(!order.includes(key))order.push(key);
+   }
+   featureOrders.set(audience,order);
+ }
  for(const {card,code} of links){
    const plan=byCode.get(code);
    if(!plan||plan.active===false)continue;
@@ -37,8 +53,12 @@ Promise.allSettled(types.map(async type=>{
    }
    const entitlements=plan.feature_entitlements;
    if(!entitlements||typeof entitlements!=='object')continue;
+   const tierOrder=featureOrders.get(plan.audience)||[];
    const enabled=Object.keys(entitlements).filter(key=>entitlements[key]===true)
-    .sort((a,b)=>(FEATURE_METADATA[a]?.[2]??999)-(FEATURE_METADATA[b]?.[2]??999)||a.localeCompare(b));
+    .sort((a,b)=>{
+      const ai=tierOrder.indexOf(a),bi=tierOrder.indexOf(b);
+      return (ai<0?999:ai)-(bi<0?999:bi)||a.localeCompare(b);
+    });
    if(!enabled.length)continue;
    const ul=card.querySelector('ul.wf-plan-full-list');
    if(!ul)continue;
