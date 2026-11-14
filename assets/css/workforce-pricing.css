@@ -16,3 +16,16 @@
 
 @media(max-width:900px){.wf-price-card .wf-plan-full-list li{font-size:12px}}
 @media(max-width:720px){.wf-price-card .wf-plan-full-list li{font-size:13px}}
+
+/* Identical detailed catalog presentation in C/TPA, Employer and Owner-Operator landing cards. */
+.emp-plan-grid{align-items:start}
+.emp-plan>.wf-plan-count{min-height:0;margin:0 0 8px;padding:0;color:#01122f;font-size:13px;line-height:1.4;font-weight:800}
+.emp-plan>.wf-plan-count strong{font-size:17px}
+.emp-plan ul.wf-plan-full-list{flex:none;display:grid;gap:0;margin:0 0 16px;padding:10px 0 16px;border-top:1px solid #e5e9ee}
+.emp-plan ul.wf-plan-full-list li{font-size:12.5px;line-height:1.45;display:flex;gap:10px;align-items:start;min-width:0;padding:7px 0;border-bottom:1px solid #eff2f7}
+.emp-plan ul.wf-plan-full-list li:last-child{border-bottom:0}
+.emp-plan ul.wf-plan-full-list li:before{width:17px;height:17px;font-size:10px}
+.emp-plan ul.wf-plan-full-list .wf-feature-text{display:flex;flex-direction:column;gap:2px;min-width:0}
+.emp-plan ul.wf-plan-full-list .wf-plan-setup-note{font-size:10px;font-weight:500;color:#65758e;line-height:1.45}
+.emp-plan>.btn{margin-top:auto}
+@media(max-width:720px){.emp-plan ul.wf-plan-full-list li{font-size:13px}}
