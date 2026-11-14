@@ -1,9 +1,10 @@
 (()=>{'use strict';
 const params=new URLSearchParams(location.search);
 const service=params.get('service')||params.get('item');
-const valid=service&&/^[a-z0-9_]{3,100}$/.test(service);
+const valid=service&&/^[a-z0-9_-]{3,100}$/.test(service);
 if(!valid)return;
-const BASE='https://elpbnytpciqnbexiaebp.supabase.co/functions/v1/workforce-store-checkout';
+const IS_LAB=['lab-account','lab-account-random-consortium','lab-account-random-consortium-docs'].includes(service);
+const BASE='https://elpbnytpciqnbexiaebp.supabase.co/functions/v1/'+(IS_LAB?'workforce-house-lab-checkout':'workforce-store-checkout');
 const HEADERS={'Content-Type':'application/json'};
 const $=id=>document.getElementById(id);
 const hide=(id,v)=>{const el=$(id);if(el)el.hidden=v};
@@ -25,8 +26,8 @@ function render(serviceData){
  const services=serviceData||{};
  main.innerHTML='<section class="ck-hero"><div class="wf-container ck-top"><div><span class="wf-eyebrow">SECURE WORKFORCE SERVICE CHECKOUT</span><h1>Secure Workforce Checkout</h1><p>Review your selected service or product, enter your details, and complete a secure one-time payment.</p></div><a class="ck-back" href="new-entrant-audit.html#packages" id="service-back">← Back to service</a></div></section><section class="ck-section"><div class="wf-container ck-grid"><div class="ck-left"><section class="ck-panel ck-payment"><div class="ck-step"><span>01</span><div><h2>Contact information</h2><p>We will use these details for your payment confirmation and service follow-up.</p></div></div><form id="wf-service-form" class="wf-service-form" novalidate></form><div class="ck-rule"></div><div class="ck-step"><span>02</span><div><h2>Secure one-time payment</h2><p>No recurring subscription is created for one-time purchases.</p></div></div><div id="service-payment-element" class="ck-stripe"></div><div id="stripe-errors" class="ck-alert ck-alert-error" role="alert" hidden></div><div id="checkout-status" class="ck-status" role="status">Secure payment loads automatically.</div><button id="service-pay" type="button" class="ck-pay" disabled>Pay securely →</button><p class="ck-fine">Payment information is processed by Stripe.</p></section></div><aside class="ck-panel ck-summary"><span class="wf-eyebrow">ONE-TIME PURCHASE</span><h2 id="service-title"></h2><p id="service-description"></p><div class="ck-summary-section"><strong class="ck-section-label">ITEM DETAILS</strong><ul id="service-features" class="ck-features"></ul></div><div class="ck-total"><span>Pay once</span><strong id="service-price"></strong></div><p class="ck-summary-note">Workforce securely processes your selected product or service payment. Service terms are listed on the corresponding product page.</p><p class="ck-summary-help"><a href="contact.html">Contact Sales</a> · <a href="support.html">Support</a></p></aside></div></section>';
  const form=$('wf-service-form');
- const back=$('service-back');if(back&&services.code&&!services.code.startsWith('fmcsa_new_entrant'))back.href='services.html';
- for(const [name,label,type,required] of [['first_name','First name','text',true],['last_name','Last name','text',true],['email','Email address','email',true],['phone','Phone number','tel',false],['company_name','Motor carrier / company name','text',false]])form.append(formField(name,label,type,required));
+ const back=$('service-back');if(back&&IS_LAB)back.href='house-lab-account-setup.html';else if(back&&services.code&&!services.code.startsWith('fmcsa_new_entrant'))back.href='services.html';
+ for(const [name,label,type,required] of [['first_name','First name','text',true],['last_name','Last name','text',true],['email','Email address','email',true],['phone','Phone number','tel',IS_LAB],['company_name','Company name','text',false]])form.append(formField(name,label,type,required));
  $('service-title').textContent=services.name||'Workforce product or service';
  $('service-description').textContent=services.description||'Workforce product or service.';
  $('service-price').textContent='$'+Number(services.price).toFixed(2);
@@ -60,19 +61,27 @@ async function start(){
   const d=await request('prepare',{item_code:service,quantity:1,...details});
   if(!d.client_secret||!d.order_id)throw Error('Unable to initialize payment.');
   orderId=d.order_id;
+  if(IS_LAB)sessionStorage.setItem('wf_house_lab_email_'+orderId,details.email);
   const result=await stripe.confirmPayment({elements,clientSecret:d.client_secret,confirmParams:{return_url:location.origin+'/checkout.html?service='+encodeURIComponent(service)+'&order_id='+encodeURIComponent(orderId)},redirect:'if_required'});
   if(result.error)throw Error(result.error.message||'Payment was not completed.');
-  await confirm(orderId);
+  await confirm(orderId,details.email);
  }catch(e){setMessage(e.message||'Payment could not be processed.',true)}
  finally{submitting=false;const pay=$('service-pay');if(pay)pay.disabled=false}
 }
-async function confirm(id){
+async function confirm(id,email){
  setMessage('Verifying payment with Stripe…');
- const result=await request('confirm',{order_id:id});
+ const result=await request('confirm',{order_id:id,email:email||sessionStorage.getItem('wf_house_lab_email_'+id)||''});
  if(!result.paid)throw Error('Payment has not been confirmed.');
  history.replaceState(null,'',location.pathname+'?service='+encodeURIComponent(service));
+ if(IS_LAB)sessionStorage.removeItem('wf_house_lab_email_'+id);
  const main=$('main');main.innerHTML='<section class="ck-section"><div class="wf-container" style="max-width:860px"><article class="ck-panel" style="padding:35px"><span class="wf-eyebrow">PAYMENT CONFIRMED</span><h1>Thank you for choosing Workforce.</h1><p>Your Workforce purchase has been verified. Keep the payment reference below for your records. Workforce will follow up using your purchase contact information.</p><p><strong>Order reference:</strong> <span id="wf-order-ref"></span></p><a class="wfne-button gold" href="services.html">Return to Workforce Services</a></article></div></section>';
  $('wf-order-ref').textContent=result.order_id;
+ if(IS_LAB){
+   const link=document.createElement('a');link.className='wfne-button gold';link.textContent='Complete House Lab Account Intake';
+   link.href=result.intake_url||'house-lab-account-setup.html';link.style.marginLeft='12px';
+   $('wf-order-ref').closest('p').after(link);
+   const note=document.createElement('p');note.textContent='Your payment includes a separate business intake step. Complete the intake before laboratory account activation and fulfillment.';link.after(note);
+ }
 }
 (async()=>{try{
  const r=await fetch(BASE,{cache:'no-store'}),data=await r.json();
