@@ -39,3 +39,25 @@
 .lab-steps p{font-size:13px;line-height:1.65;color:#5a6d86}
 @media(max-width:900px){.lab-grid{grid-template-columns:1fr;max-width:620px;margin:auto}.lab-steps{grid-template-columns:1fr}}
 @media(max-width:620px){.wf-house-lab .wf-container{width:calc(100% - 28px)}.lab-hero{padding:45px 0}.lab-packages,.lab-benefits,.lab-process{padding:45px 0}.lab-card{padding:20px}.lab-card:nth-child(2){padding:19px}}
+
+/* House Lab Account v2: Homepage-style image hero, tier-specific benefits and FAQs */
+.wf-house-lab .lab-hero{padding:0;background:#f7f9fc;overflow:hidden}
+.lab-hero-inner{display:grid;grid-template-columns:48% 52%;min-height:535px;align-items:stretch}
+.lab-hero-copy{padding:68px 42px 62px 0;display:flex;flex-direction:column;justify-content:center}
+.lab-hero-copy h1{font-size:clamp(37px,3.65vw,58px);line-height:1.12;letter-spacing:-.045em;margin:15px 0 18px}
+.lab-hero-copy p{font-size:17px;line-height:1.7;max-width:650px;margin:0}
+.lab-hero-photo{min-height:535px;background:#e7edf2 url("../../images/Confident%20Logistics%20Team%20Portrait.png") center 44%/cover no-repeat;position:relative}
+.lab-hero-photo:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#f7f9fc 0%,#f7f9fc9c 10%,transparent 36%)}
+.lab-card .lab-inherits{background:#f3f6fb;color:#324b6b;border-left:3px solid #FDC102;border-radius:5px;padding:10px 12px;margin:0 0 14px;font-size:12px;font-weight:650}
+.lab-faq{background:#f7f9fc;padding:75px 0}
+.lab-faq-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.lab-faq-grid details{border:1px solid #dbe4ee;border-radius:13px;background:#fff;padding:0 22px}
+.lab-faq-grid summary{list-style:none;cursor:pointer;font-weight:750;font-size:15px;padding:21px 32px 21px 0;position:relative}
+.lab-faq-grid summary::-webkit-details-marker{display:none}
+.lab-faq-grid summary:after{content:"+";position:absolute;right:0;top:17px;font-size:24px;font-weight:500;color:#01122f}
+.lab-faq-grid details[open] summary:after{content:"−"}
+.lab-faq-grid details p{font-size:14px;line-height:1.7;color:#53657f;margin:0 0 22px}
+.lab-faq-contact{display:flex;gap:22px;justify-content:center;align-items:center;margin-top:28px;flex-wrap:wrap}
+.lab-faq-contact p{font-weight:650;margin:0}
+@media(max-width:850px){.lab-hero-inner{display:flex;flex-direction:column;min-height:0}.lab-hero-photo{order:-1;min-height:320px;margin:0 -20px;background-position:center}.lab-hero-photo:before{background:linear-gradient(0deg,#f7f9fc40,transparent 50%)}.lab-hero-copy{padding:32px 0 44px}.lab-hero-copy h1{font-size:clamp(32px,7vw,48px)}.lab-faq-grid{grid-template-columns:1fr}}
+@media(max-width:620px){.lab-hero-photo{min-height:250px;margin:0 -14px}.lab-faq{padding:48px 0}.lab-faq-grid details{padding:0 16px}}
