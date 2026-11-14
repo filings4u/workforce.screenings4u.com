@@ -15,7 +15,7 @@ const SETUP_NOTES={
  clearinghouse_tools:'FMCSA Clearinghouse authorization and account connection required'
 };
 const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',minimumFractionDigits:Number(n)%1?2:0,maximumFractionDigits:2}).format(n);
-const cards=[...document.querySelectorAll('.wf-price-card,.wf-purchase-card')];
+const cards=[...document.querySelectorAll('.wf-price-card,.wf-purchase-card,.emp-plan')];
 if(!cards.length)return;
 const links=cards.map(card=>{const anchor=card.querySelector('a[href*="checkout.html?plan="]');if(!anchor)return null;try{const url=new URL(anchor.href,location.href);return {card,code:url.searchParams.get('plan')};}catch{return null}}).filter(Boolean);
 Promise.allSettled(types.map(async type=>{
@@ -32,7 +32,7 @@ Promise.allSettled(types.map(async type=>{
    const annual=plan.audience==='owner_operator';
    const amount=Number(annual?plan.annual_price:plan.monthly_price);
    if(Number.isFinite(amount)&&amount>0){
-     const output=card.querySelector('.wf-price-money strong');
+     const output=card.querySelector('.wf-price-money strong,.emp-plan-price strong');
      if(output)output.textContent=money(amount);
    }
    const entitlements=plan.feature_entitlements;
