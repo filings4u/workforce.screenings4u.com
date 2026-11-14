@@ -4,7 +4,7 @@ const ORDER=['lab-account','lab-account-random-consortium','lab-account-random-c
 const root=document.getElementById('houseLabProducts'),status=document.getElementById('houseLabStatus');
 const price=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(Number(n));
 function text(parent,value,tag='span',className=''){const node=document.createElement(tag);node.textContent=String(value);if(className)node.className=className;parent.append(node);return node}
-function card(item,index,previousFeatures){
+function card(item,index){
  const article=document.createElement('article');article.className='lab-card';
  text(article,index===1?'POPULAR PACKAGE':'HOUSE LAB ACCOUNT','span','lab-eyebrow');
  text(article,item.name,'h3');
@@ -13,13 +13,10 @@ function card(item,index,previousFeatures){
  text(amount,' one-time setup','span');
  const plan=text(article,'','div','lab-sub-note');
  plan.textContent=(item.included_month?'First '+item.included_month+' days of ':'')+(item.subscription_plan||'Workforce C/TPA subscription')+' included as described in purchase terms. '+(item.continuation_monthly_price?'Continuation: '+price(item.continuation_monthly_price)+'/month until canceled.':'');
- const current=(item.features||[]).filter(f=>f&&f.title);
- const additional=current.filter(f=>!previousFeatures.has(String(f.code||f.title).toLowerCase()));
- const show=additional.length?additional:current;
- text(article,index===0?'Included features':'Additional benefits in this package','h4');
- if(index>0)text(article,index===1?'Includes all Lab Account features.':'Includes all Lab Account and Random Consortium features.','p','lab-inherits');
+ text(article,'Package inclusions','h4');
  const ul=document.createElement('ul');
- for(const f of show)text(ul,f.title,'li');article.append(ul);
+ for(const f of item.features||[])if(f&&f.title)text(ul,f.title,'li');
+ article.append(ul);
  const link=text(article,'Choose package','a','btn '+(index===1?'btn-gold':'btn-navy'));
  link.href='checkout.html?service='+encodeURIComponent(item.code);
  return article;
@@ -31,12 +28,7 @@ async function run(){
  if(!r.ok||!Array.isArray(body.items))throw Error(body.error||'Unable to load the current packages.');
  const items=ORDER.map(x=>body.items.find(item=>item.code===x)).filter(Boolean);
  if(items.length!==3)throw Error('Not all three House Lab Account packages are currently available. Please contact Workforce.');
- const prior=new Set();
- root.replaceChildren(...items.map((item,index)=>{
-  const cardNode=card(item,index,new Set(prior));
-  for(const f of item.features||[])if(f&&f.title)prior.add(String(f.code||f.title).toLowerCase());
-  return cardNode;
- }));
+ root.replaceChildren(...items.map(card));
  status.textContent='3 verified House Lab Account packages available.';
  }catch(e){
  root.replaceChildren();
