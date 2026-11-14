@@ -11,8 +11,6 @@ function card(item,index){
  text(article,item.description||'Laboratory account and setup services.','p');
  const amount=text(article,price(item.price),'div','lab-money');
  text(amount,' one-time setup','span');
- const plan=text(article,'','div','lab-sub-note');
- plan.textContent=(item.included_month?'First '+item.included_month+' days of ':'')+(item.subscription_plan||'Workforce C/TPA subscription')+' included as described in purchase terms. '+(item.continuation_monthly_price?'Continuation: '+price(item.continuation_monthly_price)+'/month until canceled.':'');
  text(article,'Package inclusions','h4');
  const ul=document.createElement('ul');
  for(const f of item.features||[])if(f&&f.title)text(ul,f.title,'li');
