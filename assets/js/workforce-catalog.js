@@ -48,7 +48,7 @@ Promise.allSettled(types.map(async type=>{
      const content=document.createElement('span');
      content.className='wf-feature-text';
      const name=document.createElement('span');
-     name.textContent=FEATURE_METADATA[key]?.[0]||key.replaceAll('_',' ').replace(/\\b\\w/g,c=>c.toUpperCase());
+     name.textContent=FEATURE_METADATA[key]?.[0]||key.split("_").map(word=>word.charAt(0).toUpperCase()+word.slice(1)).join(" ");
      content.append(name);
      const note=SETUP_NOTES[key];
      if(note){
