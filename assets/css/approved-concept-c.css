@@ -282,3 +282,24 @@ body{color:#01122F}
 .footer-bottom .footer-legal a{font-size:11px;font-weight:700;color:#d7e3f1;text-decoration:none;white-space:nowrap}
 .footer-bottom .footer-legal a:hover,.footer-bottom .footer-legal a:focus-visible{color:#FDC102;text-decoration:underline}
 @media(max-width:850px){.footer-bottom .footer-legal{width:100%;justify-content:flex-start;margin:8px 0 0}}
+
+/* Workforce newsletter footer: shared sitewide footer presentation */
+.footer .footer-logo{width:180px!important;max-width:100%!important;height:auto!important;max-height:56px!important;object-fit:contain!important}
+.footer .footer-brand p{margin-top:12px}
+.footer .footer-intro{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:42px;align-items:center}
+.footer .footer-newsletter{width:100%;max-width:530px;justify-self:end}
+.footer-newsletter .footer-newsletter-eyebrow{display:block;font-size:10px;font-weight:800;letter-spacing:.15em;color:#FDC102;margin-bottom:9px}
+.footer-newsletter h2{font-size:clamp(21px,2.2vw,28px);line-height:1.2;margin:0 0 8px;color:white}
+.footer-newsletter p{font-size:13px;line-height:1.55;color:#c2ccde;margin:0 0 13px}
+.footer-subscribe-form{margin:0}
+.footer-subscribe-form .footer-subscribe-row{display:flex;align-items:stretch;gap:8px}
+.footer-subscribe-form input[type=email]{flex:1;min-width:0;width:100%;min-height:44px;padding:11px 13px;border:1px solid #b7c6dd;border-radius:7px;background:white;color:#01122F;font:inherit;font-size:14px}
+.footer-subscribe-form button{flex:none;min-height:44px;background:#FDC102;border:0;border-radius:7px;padding:10px 20px;font-size:13px;font-weight:800;color:#01122F;cursor:pointer}
+.footer-subscribe-form button:disabled{opacity:.6;cursor:wait}
+.footer-subscribe-form .footer-subscribe-consent{display:flex;align-items:flex-start;gap:9px;margin-top:11px;font-size:12px;line-height:1.5;color:#c2ccde;cursor:pointer}
+.footer-subscribe-form .footer-subscribe-consent input{flex:none;width:15px;height:15px;margin:2px 0 0;accent-color:#FDC102}
+.footer-subscribe-form [role=status]{font-size:12px;color:#b8f5ce;min-height:18px;margin:9px 0 0}
+.footer-subscribe-form [role=status].is-error{color:#ffd3d3}
+.footer-subscribe-form .footer-hidden-field{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+@media(max-width:850px){.footer .footer-intro{grid-template-columns:1fr;gap:24px}.footer .footer-newsletter{justify-self:start;max-width:560px}.footer .footer-logo{width:160px!important}}
+@media(max-width:420px){.footer-subscribe-form .footer-subscribe-row{flex-direction:column}.footer-subscribe-form button{width:100%}}
